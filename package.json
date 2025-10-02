@@ -1,0 +1,26 @@
+{
+	"name": "t",
+	"private": true,
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev",
+		"format-and-lint": "biome check .",
+		"format-and-lint:fix": "biome check . --write",
+		"check-types": "turbo run check-types",
+		"publish-packages": "turbo run format-and-lint test build && changeset version && changeset publish"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.4",
+		"@changesets/cli": "^2.29.7",
+		"turbo": "^2.5.8",
+		"typescript": "5.9.2"
+	},
+	"engines": {
+		"node": ">=18"
+	},
+	"packageManager": "bun@1.2.22",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	]
+}

@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"module": "index.ts",
 	"type": "module",
-	"private": true,
+	"private": false,
 	"scripts": {
 		"build": "tsup",
 		"test": "bun test"
