@@ -7,7 +7,7 @@
 		"format-and-lint": "biome check .",
 		"format-and-lint:fix": "biome check . --write",
 		"check-types": "turbo run check-types",
-		"publish-packages": "turbo run format-and-lint test build && changeset version && changeset publish"
+		"release": "turbo run format-and-lint test build && changeset version && changeset publish"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.2.4",

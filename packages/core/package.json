@@ -1,8 +1,21 @@
 {
 	"name": "@foldcms/core",
 	"version": "0.1.0",
-	"module": "index.ts",
 	"type": "module",
+	"exports": {
+		"./collections": {
+			"types": "./dist/collections.d.ts",
+			"import": "./dist/collections.js"
+		},
+		"./cms": {
+			"types": "./dist/cms.d.ts",
+			"import": "./dist/cms.js"
+		},
+		"./loaders": {
+			"types": "./dist/loaders.d.ts",
+			"import": "./dist/loaders.js"
+		}
+	},
 	"private": false,
 	"scripts": {
 		"build": "tsup",
