@@ -1,5 +1,5 @@
-import { BunContext } from "@effect/platform-bun";
 import { expect, test } from "bun:test";
+import { BunContext } from "@effect/platform-bun";
 import { ConfigProvider, Effect, Schema } from "effect";
 import * as loaders from "../src/loaders";
 
