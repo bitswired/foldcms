@@ -1,6 +1,9 @@
 {
 	"name": "t",
 	"private": true,
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "turbo run dev",
