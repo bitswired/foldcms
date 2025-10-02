@@ -1,7 +1,7 @@
-import { afterEach, beforeEach, expect, test } from "bun:test";
 import { FileSystem } from "@effect/platform";
 import { BunContext } from "@effect/platform-bun";
 import { SqliteClient } from "@effect/sql-sqlite-bun";
+import { afterEach, beforeEach, expect, test } from "bun:test";
 import { Effect, pipe, Schema } from "effect";
 import { make as makeCms } from "../src/cms";
 import { make as makeCollection } from "../src/collections";

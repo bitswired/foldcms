@@ -81,7 +81,7 @@ export class CmsConfig<T extends CollectionAny> extends Data.Class<{
 
 export class CmsLoaded<T extends CollectionAny> extends Data.Class<{
 	readonly collections: ReadonlyRecord<string, CollectionAny>;
-	readonly loadedData: ReadonlyRecord<string, any>;
+	readonly loadedData: ReadonlyRecord<string, any[]>;
 }> {
 	transform(): Effect.Effect<
 		CmsTransformed<T>,

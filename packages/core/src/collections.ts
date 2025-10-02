@@ -50,7 +50,7 @@ export class Collection<
 	readonly name: TName;
 	readonly loadingSchema: TLoadSchema;
 	readonly transformedSchema: TTransformSchema;
-	readonly loader: Effect.Effect<TLoaded[], LoadingError, never>;
+	readonly loader: Effect.Effect<readonly TLoaded[], LoadingError, never>;
 	readonly transformer: (
 		data: TLoaded,
 	) => Effect.Effect<TTransformed, TransformationError, never>;
