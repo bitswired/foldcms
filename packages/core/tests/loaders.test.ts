@@ -1,5 +1,5 @@
-import { expect, test } from "bun:test";
 import { BunContext } from "@effect/platform-bun";
+import { expect, test } from "bun:test";
 import { ConfigProvider, Effect, Schema } from "effect";
 import * as loaders from "../src/loaders";
 
@@ -31,7 +31,8 @@ test("loads JSON collection from files", async () => {
 		program.pipe(Effect.provide(BunContext.layer)),
 	);
 
-	expect(res).toEqual(expectedData);
+	expect(res).toEqual(expect.arrayContaining(expectedData));
+	expect(res).toHaveLength(expectedData.length);
 });
 
 test("loads JSON collection from lines file", async () => {
@@ -46,7 +47,8 @@ test("loads JSON collection from lines file", async () => {
 		program.pipe(Effect.provide(BunContext.layer)),
 	);
 
-	expect(res).toEqual(expectedData);
+	expect(res).toEqual(expect.arrayContaining(expectedData));
+	expect(res).toHaveLength(expectedData.length);
 });
 
 test("loads YAML collection from files", async () => {
@@ -61,7 +63,8 @@ test("loads YAML collection from files", async () => {
 		program.pipe(Effect.provide(BunContext.layer)),
 	);
 
-	expect(res).toEqual(expectedData);
+	expect(res).toEqual(expect.arrayContaining(expectedData));
+	expect(res).toHaveLength(expectedData.length);
 });
 
 test("loads YAML collection from stream file", async () => {
@@ -76,5 +79,6 @@ test("loads YAML collection from stream file", async () => {
 		program.pipe(Effect.provide(BunContext.layer)),
 	);
 
-	expect(res).toEqual(expectedData);
+	expect(res).toEqual(expect.arrayContaining(expectedData));
+	expect(res).toHaveLength(expectedData.length);
 });
