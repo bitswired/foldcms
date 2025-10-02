@@ -1,0 +1,24 @@
+{
+	"name": "@foldcms/core",
+	"version": "0.1.0",
+	"module": "index.ts",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"build": "tsup",
+		"test": "bun test"
+	},
+	"devDependencies": {
+		"@effect/platform-bun": "^0.81.0",
+		"@effect/sql-sqlite-bun": "^0.47.0",
+		"@types/bun": "latest",
+		"tsup": "^8.5.0"
+	},
+	"peerDependencies": {
+		"@effect/platform": "^0.92.1",
+		"effect": "^3.18.1",
+		"mdx-bundler": "^10.1.1",
+		"typescript": "^5",
+		"yaml": "^2.8.1"
+	}
+}
