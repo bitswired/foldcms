@@ -1,5 +1,11 @@
 # @foldcms/core
 
+## 0.1.4
+
+### Patch Changes
+
+- 4ed8161: Update README
+
 ## 0.1.3
 
 ### Patch Changes
