@@ -6,11 +6,7 @@
 	],
 	"type": "module",
 	"exports": {
-		"./collections": {
-			"types": "./dist/collections.d.ts",
-			"import": "./dist/collections.js"
-		},
-		"./cms": {
+		".": {
 			"types": "./dist/cms.d.ts",
 			"import": "./dist/cms.js"
 		},
