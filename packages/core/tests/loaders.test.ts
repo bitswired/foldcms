@@ -1,5 +1,5 @@
-import { expect, test } from "bun:test";
 import { BunContext } from "@effect/platform-bun";
+import { expect, test } from "bun:test";
 import { Effect, Schema, Stream } from "effect";
 import * as loaders from "../src/loaders";
 
@@ -93,15 +93,16 @@ test("loads MDX collection from files", async () => {
 	const program = loaders
 		.mdxLoader(
 			Schema.Struct({
-				frontmatter: Schema.Record({
-					key: Schema.String,
-					value: Schema.Any,
-				}),
-				raw: Schema.String,
-				code: Schema.String,
-				exports: Schema.Record({
-					key: Schema.String,
-					value: Schema.Any,
+				title: Schema.String,
+				slug: Schema.String,
+				tags: Schema.Array(Schema.String),
+				meta: Schema.Struct({
+					raw: Schema.String,
+					mdx: Schema.String,
+					exports: Schema.Record({
+						key: Schema.String,
+						value: Schema.Any,
+					}),
 				}),
 			}),
 			{

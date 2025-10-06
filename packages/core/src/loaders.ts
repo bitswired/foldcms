@@ -145,10 +145,12 @@ export const mdxLoader = <T extends AnyStruct>(
 				}
 
 				return {
-					code,
-					frontmatter,
-					raw: content,
-					exports,
+					...frontmatter,
+					meta: {
+						mdx: code,
+						raw: content,
+						exports,
+					},
 				};
 			}),
 		),
