@@ -7,8 +7,8 @@
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./dist/cms.d.ts",
-			"import": "./dist/cms.js"
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
 		},
 		"./loaders": {
 			"types": "./dist/loaders.d.ts",
