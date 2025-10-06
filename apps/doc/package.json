@@ -9,7 +9,7 @@
 		"build": "bunx astro build",
 		"preview": "bunx astro preview",
 		"astro": "bunx astro",
-    "test": "echo \"No tests yet...\"",
+		"test": "echo \"No tests yet...\""
 	},
 	"dependencies": {
 		"@astrojs/starlight": "^0.36.0",
