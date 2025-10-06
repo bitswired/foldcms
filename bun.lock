@@ -25,7 +25,7 @@
     },
     "packages/core": {
       "name": "@foldcms/core",
-      "version": "0.1.4",
+      "version": "0.2.1",
       "devDependencies": {
         "@effect/platform-bun": "^0.81.0",
         "@effect/sql-sqlite-bun": "^0.47.0",
@@ -36,6 +36,7 @@
         "@effect/platform": "^0.92.1",
         "effect": "^3.18.1",
         "mdx-bundler": "^10.1.1",
+        "react": "^19.2.0",
         "typescript": "^5",
         "yaml": "^2.8.1",
       },
@@ -1104,6 +1105,8 @@
     "queue-microtask": ["queue-microtask@1.2.3", "", {}, "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="],
 
     "radix3": ["radix3@1.1.2", "", {}, "sha512-b484I/7b8rDEdSDKckSSBA8knMpcdsXudlE/LNL639wFoHKwLbEkQFZHWEYwDC0wa0FKUcCY+GAF73Z7wxNVFA=="],
+
+    "react": ["react@19.2.0", "", {}, "sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ=="],
 
     "read-yaml-file": ["read-yaml-file@1.1.0", "", { "dependencies": { "graceful-fs": "^4.1.5", "js-yaml": "^3.6.1", "pify": "^4.0.1", "strip-bom": "^3.0.0" } }, "sha512-VIMnQi/Z4HT2Fxuwg5KrY174U1VdUIASQVWXXyqtNRtxSr9IYkn1rsI6Tb6HsrHCmB7gVpNwX6JxPTHcH6IoTA=="],
 
