@@ -7,7 +7,8 @@ import starlightTypeDoc, { typeDocSidebarGroup } from "starlight-typedoc";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://bitswired.github.io/foldcms",
+	site: "https://bitswired.github.io",
+	base: "/foldcms",
 	build: {
 		assets: "assets",
 	},
