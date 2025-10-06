@@ -1,5 +1,11 @@
 # @foldcms/core
 
+## 0.2.2
+
+### Patch Changes
+
+- c5b2e7f: Fix
+
 ## 0.2.1
 
 ### Patch Changes
