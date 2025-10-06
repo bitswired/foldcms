@@ -7,7 +7,7 @@ title: "jsonLinesLoader"
 
 > **jsonLinesLoader**\<`T`\>(`schema`, `config`): `Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
 
-Defined in: [packages/core/src/loaders.ts:56](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/loaders.ts#L56)
+Defined in: [packages/core/src/loaders.ts:56](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/loaders.ts#L56)
 
 ## Type Parameters
 

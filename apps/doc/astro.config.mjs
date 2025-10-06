@@ -8,6 +8,9 @@ import starlightTypeDoc, { typeDocSidebarGroup } from "starlight-typedoc";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://docs.fold.dev",
+	build: {
+		assets: "assets",
+	},
 	integrations: [
 		starlight({
 			title: "My Docs",

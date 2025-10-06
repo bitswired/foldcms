@@ -5,7 +5,7 @@ prev: false
 title: "LoadingError"
 ---
 
-Defined in: [packages/core/src/cms.ts:17](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L17)
+Defined in: [packages/core/src/cms.ts:19](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L19)
 
 ## Extends
 

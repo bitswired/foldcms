@@ -7,4 +7,4 @@ title: "SqlContentStore"
 
 > `const` **SqlContentStore**: `Layer`\<`ContentStore`, `SqlError`, `SqlClient`\>
 
-Defined in: [packages/core/src/cms.ts:571](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L571)
+Defined in: [packages/core/src/cms.ts:573](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L573)

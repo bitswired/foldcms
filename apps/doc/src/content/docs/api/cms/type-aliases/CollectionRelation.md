@@ -7,7 +7,7 @@ title: "CollectionRelation"
 
 > **CollectionRelation**\<`TField`, `TTarget`\> = `object`
 
-Defined in: [packages/core/src/cms.ts:39](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L39)
+Defined in: [packages/core/src/cms.ts:41](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L41)
 
 ## Type Parameters
 
@@ -25,7 +25,7 @@ Defined in: [packages/core/src/cms.ts:39](https://github.com/bitswired/foldcms/b
 
 > `readonly` **field**: `TField`
 
-Defined in: [packages/core/src/cms.ts:44](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L44)
+Defined in: [packages/core/src/cms.ts:46](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L46)
 
 ***
 
@@ -33,7 +33,7 @@ Defined in: [packages/core/src/cms.ts:44](https://github.com/bitswired/foldcms/b
 
 > `readonly` **target**: `TTarget`
 
-Defined in: [packages/core/src/cms.ts:45](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L45)
+Defined in: [packages/core/src/cms.ts:47](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L47)
 
 ***
 
@@ -41,4 +41,4 @@ Defined in: [packages/core/src/cms.ts:45](https://github.com/bitswired/foldcms/b
 
 > `readonly` **type**: `"single"` \| `"array"` \| `"map"`
 
-Defined in: [packages/core/src/cms.ts:43](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L43)
+Defined in: [packages/core/src/cms.ts:45](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L45)

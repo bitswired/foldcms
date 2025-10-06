@@ -9,7 +9,7 @@ title: "defineCollection"
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `never`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:85](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L85)
+Defined in: [packages/core/src/cms.ts:87](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L87)
 
 ### Type Parameters
 
@@ -19,7 +19,7 @@ Defined in: [packages/core/src/cms.ts:85](https://github.com/bitswired/foldcms/b
 
 #### TRelations
 
-`TRelations` *extends* `Partial`\<`Record`\<keyof `Type`\<`TLoadSchema`\>, [`CollectionRelation`](/api/cms/type-aliases/collectionrelation/)\<`string`, `string`\>\>\> = \{ \}
+`TRelations` *extends* `Partial`\<`Record`\<keyof `Type`\<`TLoadSchema`\>, [`CollectionRelation`](/api/cms/type-aliases/collectionrelation/)\<`string`, `string`\>\>\>
 
 #### TLoaderDeps
 
@@ -65,7 +65,7 @@ Defined in: [packages/core/src/cms.ts:85](https://github.com/bitswired/foldcms/b
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:115](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L115)
+Defined in: [packages/core/src/cms.ts:117](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L117)
 
 ### Type Parameters
 
@@ -75,7 +75,7 @@ Defined in: [packages/core/src/cms.ts:115](https://github.com/bitswired/foldcms/
 
 #### TRelations
 
-`TRelations` *extends* `Partial`\<`Record`\<keyof `Type`\<`TLoadSchema`\>, [`CollectionRelation`](/api/cms/type-aliases/collectionrelation/)\<`string`, `string`\>\>\> = \{ \}
+`TRelations` *extends* `Partial`\<`Record`\<keyof `Type`\<`TLoadSchema`\>, [`CollectionRelation`](/api/cms/type-aliases/collectionrelation/)\<`string`, `string`\>\>\>
 
 #### TLoaderDeps
 
@@ -125,7 +125,7 @@ Defined in: [packages/core/src/cms.ts:115](https://github.com/bitswired/foldcms/
 
 > **defineCollection**\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:152](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L152)
+Defined in: [packages/core/src/cms.ts:154](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L154)
 
 ### Type Parameters
 
@@ -139,7 +139,7 @@ Defined in: [packages/core/src/cms.ts:152](https://github.com/bitswired/foldcms/
 
 #### TRelations
 
-`TRelations` *extends* `Partial`\<`Record`\<keyof `Type`\<`TTransformSchema`\>, [`CollectionRelation`](/api/cms/type-aliases/collectionrelation/)\<`string`, `string`\>\>\> = \{ \}
+`TRelations` *extends* `Partial`\<`Record`\<keyof `Type`\<`TTransformSchema`\>, [`CollectionRelation`](/api/cms/type-aliases/collectionrelation/)\<`string`, `string`\>\>\>
 
 #### TLoaderDeps
 

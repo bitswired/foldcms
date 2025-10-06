@@ -5,7 +5,7 @@ prev: false
 title: "Cms"
 ---
 
-Defined in: [packages/core/src/cms.ts:259](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L259)
+Defined in: [packages/core/src/cms.ts:261](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L261)
 
 ## Type Parameters
 
@@ -27,7 +27,7 @@ Defined in: [packages/core/src/cms.ts:259](https://github.com/bitswired/foldcms/
 
 > **collections**: `TCollection`
 
-Defined in: [packages/core/src/cms.ts:264](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L264)
+Defined in: [packages/core/src/cms.ts:266](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L266)
 
 ***
 
@@ -35,7 +35,7 @@ Defined in: [packages/core/src/cms.ts:264](https://github.com/bitswired/foldcms/
 
 > **getAll**: \<`TName`\>(`collectionName`) => `Effect`\<readonly `CollectionParts`\<`TCollection`\[`TName`\]\>\[`"transformed"`\][], `TError`\>
 
-Defined in: [packages/core/src/cms.ts:273](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L273)
+Defined in: [packages/core/src/cms.ts:275](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L275)
 
 #### Type Parameters
 
@@ -59,7 +59,7 @@ Defined in: [packages/core/src/cms.ts:273](https://github.com/bitswired/foldcms/
 
 > **getById**: \<`TName`\>(`collectionName`, `id`) => `Effect`\<`Option`\<`CollectionParts`\<`TCollection`\[`TName`\]\>\[`"transformed"`\]\>, `TError`\>
 
-Defined in: [packages/core/src/cms.ts:265](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L265)
+Defined in: [packages/core/src/cms.ts:267](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L267)
 
 #### Type Parameters
 
@@ -87,7 +87,7 @@ Defined in: [packages/core/src/cms.ts:265](https://github.com/bitswired/foldcms/
 
 > **loadRelation**: \<`TSourceName`, `TField`\>(`sourceCollection`, `item`, `field`) => `Effect`\<`RelationReturnType`\<`RelationAt`\<`CollectionParts`\<`TCollection`\[`TSourceName`\]\>\[`"relations"`\], `TField`\>, `TCollection`\>, `TError`\>
 
-Defined in: [packages/core/src/cms.ts:280](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L280)
+Defined in: [packages/core/src/cms.ts:282](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L282)
 
 #### Type Parameters
 
