@@ -2,8 +2,10 @@ import { SqlClient } from "@effect/sql";
 import {
 	Context,
 	Data,
+	Duration,
 	Effect,
 	Layer,
+	Logger,
 	Option,
 	pipe,
 	Record,
@@ -43,39 +45,45 @@ export type CollectionRelation<
 	readonly target: TTarget;
 };
 
-type AnyStruct = Schema.Struct<any>;
+type AnySchema = Schema.Schema<any, any, never>;
 
 export interface Collection<
-	TLoadSchema extends AnyStruct,
-	TTransformSchema extends AnyStruct,
+	TLoadSchema extends AnySchema,
+	TTransformSchema extends AnySchema,
 	TRelations extends Partial<
 		Record<keyof Schema.Schema.Type<TTransformSchema>, CollectionRelation>
 	>,
 	TLoaderDeps,
 	TTransformerDeps,
 	TValidatorDeps,
-	TLoaded = Schema.Schema.Type<TLoadSchema>,
-	TTransformed = Schema.Schema.Type<TTransformSchema>,
 > {
 	readonly loadingSchema: TLoadSchema;
 	readonly transformedSchema: TTransformSchema;
-	readonly loader: Stream.Stream<TLoaded, LoadingError, TLoaderDeps>;
+	readonly loader: Stream.Stream<
+		Schema.Schema.Type<TLoadSchema>,
+		LoadingError,
+		TLoaderDeps
+	>;
 	readonly transformer: (
-		data: TLoaded,
-	) => Effect.Effect<TTransformed, TransformationError, TTransformerDeps>;
+		data: Schema.Schema.Type<TLoadSchema>,
+	) => Effect.Effect<
+		Schema.Schema.Type<TTransformSchema>,
+		TransformationError,
+		TTransformerDeps
+	>;
 	readonly validator: (
-		data: TTransformed,
+		data: Schema.Schema.Type<TTransformSchema>,
 	) => Effect.Effect<void, ValidationError, TValidatorDeps>;
 	readonly relations: TRelations;
 }
 
-type CollectionAny = Collection<any, any, any, any, any, any, any, any>;
+type CollectionAny = Collection<any, any, any, any, any, any>;
 
 export type CollectionMap<T extends Record<string, CollectionAny>> = T;
 
 // Overload 1: No transformation (minimal)
 export function defineCollection<
-	TLoadSchema extends AnyStruct,
+	TLoadSchema extends AnySchema,
 	const TRelations extends Partial<
 		Record<keyof Schema.Schema.Type<TLoadSchema>, CollectionRelation>
 	> = {},
@@ -92,8 +100,8 @@ export function defineCollection<
 	readonly validator?: (
 		data: Schema.Schema.Type<TLoadSchema>,
 	) => Effect.Effect<void, ValidationError, TValidatorDeps>;
-	readonly transformer?: never; // Explicitly exclude transformer
-	readonly transformedSchema?: never; // Explicitly exclude transformedSchema
+	readonly transformer?: never;
+	readonly transformedSchema?: never;
 }): Collection<
 	TLoadSchema,
 	TLoadSchema,
@@ -103,9 +111,9 @@ export function defineCollection<
 	TValidatorDeps
 >;
 
-// Overload 2: With transformer but no transformedSchema (transforms within same schema)
+// Overload 2: With transformer but no transformedSchema
 export function defineCollection<
-	TLoadSchema extends AnyStruct,
+	TLoadSchema extends AnySchema,
 	const TRelations extends Partial<
 		Record<keyof Schema.Schema.Type<TLoadSchema>, CollectionRelation>
 	> = {},
@@ -126,7 +134,7 @@ export function defineCollection<
 		TransformationError,
 		TTransformerDeps
 	>;
-	readonly transformedSchema?: never; // Explicitly exclude transformedSchema
+	readonly transformedSchema?: never;
 	readonly relations?: TRelations;
 	readonly validator?: (
 		data: Schema.Schema.Type<TLoadSchema>,
@@ -140,10 +148,10 @@ export function defineCollection<
 	TValidatorDeps
 >;
 
-// Overload 3: With both transformedSchema and transformer (full transformation)
+// Overload 3: With both transformedSchema and transformer
 export function defineCollection<
-	TLoadSchema extends AnyStruct,
-	TTransformSchema extends AnyStruct,
+	TLoadSchema extends AnySchema,
+	TTransformSchema extends AnySchema,
 	const TRelations extends Partial<
 		Record<keyof Schema.Schema.Type<TTransformSchema>, CollectionRelation>
 	> = {},
@@ -199,22 +207,21 @@ export function defineCollection(config: any): any {
 	};
 }
 
+// CollectionParts helper
 type CollectionParts<C> = C extends Collection<
-	infer LS,
-	infer TS,
-	infer R,
+	infer TLoadSchema,
+	infer TTransformSchema,
+	infer TRelations,
 	infer TLoaderDeps,
 	infer TTransformerDeps,
-	infer TValidatorDeps,
-	infer TLoaded,
-	infer TTransformed
+	infer TValidatorDeps
 >
 	? {
-			loadingSchema: LS;
-			transformedSchema: TS;
-			relations: R;
-			loaded: TLoaded;
-			transformed: TTransformed;
+			loadingSchema: TLoadSchema;
+			transformedSchema: TTransformSchema;
+			relations: TRelations;
+			loaded: Schema.Schema.Type<TLoadSchema>;
+			transformed: Schema.Schema.Type<TTransformSchema>;
 			loaderDeps: TLoaderDeps;
 			transformerDeps: TTransformerDeps;
 			validatorDeps: TValidatorDeps;
@@ -333,7 +340,15 @@ export const build = <
 			Stream.drain,
 			Stream.runCollect,
 		);
-	});
+	}).pipe(
+		Effect.withSpan("foldcms-build"),
+		Effect.timed,
+		Effect.tap(([duration]) =>
+			Effect.log(`Build completed in ${Duration.toMillis(duration)}ms`),
+		),
+		Effect.map(([_duration, result]) => result),
+		Effect.provide(Logger.pretty),
+	);
 
 export const factory = <
 	TMap extends Record<string, CollectionAny>,
@@ -352,8 +367,6 @@ export const makeCms = <
 		CmsTag,
 
 		Effect.gen(function* () {
-			yield* Effect.log("kajsndf");
-
 			const contentStore = yield* ContentStore;
 
 			const cms: Cms<TMap, TCollection> = {
@@ -361,6 +374,7 @@ export const makeCms = <
 				getById: (collectionName, id) =>
 					Effect.gen(function* () {
 						const collection = config.collections[collectionName];
+
 						if (!collection) {
 							return yield* Effect.fail(
 								new CmsError({
@@ -368,10 +382,13 @@ export const makeCms = <
 								}),
 							);
 						}
+
+						const schema = collection.transformedSchema;
+
 						const row = yield* contentStore.getById(
 							collectionName as string,
 							id,
-							collection.transformedSchema,
+							schema,
 						);
 						return row;
 					}),
@@ -386,9 +403,12 @@ export const makeCms = <
 								}),
 							);
 						}
+
+						const schema = collection.transformedSchema;
+
 						const rows = yield* contentStore.getAll(
 							collectionName as string,
-							collection.transformedSchema,
+							schema,
 						);
 						return rows;
 					}),
@@ -535,13 +555,13 @@ class ContentStore extends Context.Tag("ContentStore")<
 			data: T["Type"],
 		) => Effect.Effect<void, ContentStoreError, never>;
 
-		getById: <T extends Schema.Struct<any>>(
+		getById: <T extends AnySchema>(
 			collection: string,
 			id: string,
 			schema: T,
 		) => Effect.Effect<Option.Option<T["Type"]>, ContentStoreError>;
 
-		getAll: <T extends Schema.Struct<any>>(
+		getAll: <T extends AnySchema>(
 			collection: string,
 			schema: T,
 		) => Effect.Effect<readonly T["Type"][], ContentStoreError>;
@@ -551,8 +571,6 @@ class ContentStore extends Context.Tag("ContentStore")<
 export const SqlContentStore = Layer.effect(
 	ContentStore,
 	Effect.gen(function* () {
-		yield* Effect.log("kajsndf");
-
 		const sql = yield* SqlClient.SqlClient;
 
 		const init = pipe(
@@ -628,25 +646,24 @@ export const SqlContentStore = Layer.effect(
 					Effect.mapError(
 						(e) => new ContentStoreError({ message: e.message, cause: e }),
 					),
-				) as Effect.Effect<
-					Option.Option<Schema.Schema.Type<typeof schema>>,
-					ContentStoreError
-				>,
+				),
 
 			getAll: (collection, schema) =>
 				pipe(
 					sql<RowData>`SELECT data FROM entities WHERE collection = ${collection}`,
 					Effect.map((results) => results.map((row) => JSON.parse(row.data))),
 					Effect.flatMap((parsed) =>
-						Schema.decodeUnknown(Schema.Array(schema))(parsed),
+						// TypeScript can't infer that Schema.Array(schema) preserves the 'never'
+						// requirement constraint from AnySchema, even though schema: T extends AnySchema.
+						// We cast through unknown to assert that the array schema also has no requirements.
+						Schema.decodeUnknown(Schema.Array(schema) as unknown as AnySchema)(
+							parsed,
+						),
 					),
 					Effect.mapError(
 						(e) => new ContentStoreError({ message: e.message, cause: e }),
 					),
-				) as Effect.Effect<
-					readonly Schema.Schema.Type<typeof schema>[],
-					ContentStoreError
-				>,
+				),
 		});
 	}),
 );

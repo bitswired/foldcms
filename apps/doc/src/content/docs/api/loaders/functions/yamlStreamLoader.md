@@ -5,9 +5,9 @@ prev: false
 title: "yamlStreamLoader"
 ---
 
-> **yamlStreamLoader**\<`T`\>(`_schema`, `config`): `Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
+> **yamlStreamLoader**\<`T`\>(`schema`, `config`): `Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
 
-Defined in: [packages/core/src/loaders.ts:86](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/loaders.ts#L86)
+Defined in: [packages/core/src/loaders.ts:88](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/loaders.ts#L88)
 
 ## Type Parameters
 
@@ -17,7 +17,7 @@ Defined in: [packages/core/src/loaders.ts:86](https://github.com/bitswired/foldc
 
 ## Parameters
 
-### \_schema
+### schema
 
 `T`
 

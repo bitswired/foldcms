@@ -7,7 +7,7 @@ title: "jsonFilesLoader"
 
 > **jsonFilesLoader**\<`T`\>(`schema`, `config`): `Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
 
-Defined in: [packages/core/src/loaders.ts:40](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/loaders.ts#L40)
+Defined in: [packages/core/src/loaders.ts:42](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/loaders.ts#L42)
 
 ## Type Parameters
 

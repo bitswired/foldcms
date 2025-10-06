@@ -5,9 +5,9 @@ prev: false
 title: "build"
 ---
 
-> **build**\<`TMap`, `TCollection`\>(`config`): `Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/), `ContentStore` \| `CollectionDeps`\<`TCollection`\>\>
+> **build**\<`TMap`, `TCollection`\>(`config`): `Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/), `ContentStore` \| `Exclude`\<`Exclude`\<`CollectionDeps`\<`TCollection`\>, `ParentSpan`\>, `never`\>\>
 
-Defined in: [packages/core/src/cms.ts:345](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L345)
+Defined in: [packages/core/src/cms.ts:299](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L299)
 
 ## Type Parameters
 
@@ -29,4 +29,4 @@ Defined in: [packages/core/src/cms.ts:345](https://github.com/bitswired/foldcms/
 
 ## Returns
 
-`Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/), `ContentStore` \| `CollectionDeps`\<`TCollection`\>\>
+`Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/), `ContentStore` \| `Exclude`\<`Exclude`\<`CollectionDeps`\<`TCollection`\>, `ParentSpan`\>, `never`\>\>

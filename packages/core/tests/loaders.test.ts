@@ -88,3 +88,37 @@ test("loads YAML collection from stream file", async () => {
 	expect(res).toEqual(expect.arrayContaining(expectedData));
 	expect(res).toHaveLength(expectedData.length);
 });
+
+test("loads MDX collection from files", async () => {
+	const program = loaders
+		.mdxLoader(
+			Schema.Struct({
+				frontmatter: Schema.Record({
+					key: Schema.String,
+					value: Schema.Any,
+				}),
+				raw: Schema.String,
+				code: Schema.String,
+				exports: Schema.Record({
+					key: Schema.String,
+					value: Schema.Any,
+				}),
+			}),
+			{
+				baseDir: "tests/data",
+				folder: "mdx-loader",
+				bundlerOptions: {},
+				exports: ["data"],
+			},
+		)
+		.pipe(
+			Stream.runCollect,
+			Effect.map((chunk) => Array.from(chunk)),
+		);
+
+	const res = await Effect.runPromise(
+		program.pipe(Effect.provide(BunContext.layer)),
+	);
+
+	expect(res).toBeArray();
+});

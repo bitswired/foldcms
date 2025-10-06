@@ -1,5 +1,7 @@
 import { FileSystem, Path } from "@effect/platform";
 import { Effect, pipe, Schema, Stream } from "effect";
+import { bundleMDX } from "mdx-bundler";
+import { getMDXExport } from "mdx-bundler/client";
 import { parseAllDocuments, parseDocument } from "yaml";
 import { LoadingError } from "./cms";
 
@@ -84,7 +86,7 @@ export const yamlFilesLoader = <T extends AnyStruct>(
 	) as Stream.Stream<T["Type"], LoadingError, never>;
 
 export const yamlStreamLoader = <T extends AnyStruct>(
-	_schema: T,
+	schema: T,
 	config: { baseDir: string; folder: string },
 ) =>
 	pipe(
@@ -96,5 +98,60 @@ export const yamlStreamLoader = <T extends AnyStruct>(
 		Stream.mapConcat((content) =>
 			parseAllDocuments(content).map((doc) => doc.toJSON()),
 		),
+		Stream.mapEffect((raw) => Schema.decodeUnknown(schema)(raw)),
+		Stream.mapError((e) => new LoadingError({ message: e.message, cause: e })),
+	) as Stream.Stream<T["Type"], LoadingError, never>;
+
+export const mdxLoader = <T extends AnyStruct>(
+	schema: T,
+	config: {
+		baseDir: string;
+		folder: string;
+		bundlerOptions: Omit<Parameters<typeof bundleMDX>[0], "source" | "file">;
+		exports?: string[];
+	},
+) =>
+	pipe(
+		streamFiles({
+			...config,
+			filter: (filename) => filename.endsWith(".mdx"),
+		}),
+		Stream.mapEffect((content) =>
+			Effect.gen(function* () {
+				const { code, frontmatter } = yield* Effect.tryPromise({
+					try: () =>
+						bundleMDX({
+							source: content,
+							...config.bundlerOptions,
+						}),
+					catch: (e) =>
+						new LoadingError({ message: "MDX bundler error", cause: e }),
+				});
+
+				const exportsConfig = config.exports;
+
+				let exports: Record<string, unknown> = {};
+				if (exportsConfig && exportsConfig.length > 0) {
+					const mdxExports = getMDXExport(code);
+					exports = Object.keys(mdxExports)
+						.filter((key) => key !== "default" && exportsConfig.includes(key))
+						.reduce(
+							(acc, key) => {
+								acc[key] = mdxExports[key];
+								return acc;
+							},
+							{} as Record<string, unknown>,
+						);
+				}
+
+				return {
+					code,
+					frontmatter,
+					raw: content,
+					exports,
+				};
+			}),
+		),
+		Stream.mapEffect((x) => Schema.decodeUnknown(schema)(x)),
 		Stream.mapError((e) => new LoadingError({ message: e.message, cause: e })),
 	) as Stream.Stream<T["Type"], LoadingError, never>;

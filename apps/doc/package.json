@@ -2,6 +2,7 @@
 	"name": "@foldcms/doc",
 	"type": "module",
 	"version": "0.0.1",
+	"private": true,
 	"scripts": {
 		"dev": "bunx astro dev",
 		"start": "bunx astro dev",

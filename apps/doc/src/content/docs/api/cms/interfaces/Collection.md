@@ -5,17 +5,17 @@ prev: false
 title: "Collection"
 ---
 
-Defined in: [packages/core/src/cms.ts:48](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L48)
+Defined in: [packages/core/src/cms.ts:50](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L50)
 
 ## Type Parameters
 
 ### TLoadSchema
 
-`TLoadSchema` *extends* `AnyStruct`
+`TLoadSchema` *extends* `AnySchema`
 
 ### TTransformSchema
 
-`TTransformSchema` *extends* `AnyStruct`
+`TTransformSchema` *extends* `AnySchema`
 
 ### TRelations
 
@@ -33,21 +33,13 @@ Defined in: [packages/core/src/cms.ts:48](https://github.com/bitswired/foldcms/b
 
 `TValidatorDeps`
 
-### TLoaded
-
-`TLoaded` = `Schema.Schema.Type`\<`TLoadSchema`\>
-
-### TTransformed
-
-`TTransformed` = `Schema.Schema.Type`\<`TTransformSchema`\>
-
 ## Properties
 
 ### loader
 
-> `readonly` **loader**: `Stream`\<`TLoaded`, [`LoadingError`](/api/cms/classes/loadingerror/), `TLoaderDeps`\>
+> `readonly` **loader**: `Stream`\<`Type`\<`TLoadSchema`\>, [`LoadingError`](/api/cms/classes/loadingerror/), `TLoaderDeps`\>
 
-Defined in: [packages/core/src/cms.ts:62](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L62)
+Defined in: [packages/core/src/cms.ts:62](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L62)
 
 ***
 
@@ -55,7 +47,7 @@ Defined in: [packages/core/src/cms.ts:62](https://github.com/bitswired/foldcms/b
 
 > `readonly` **loadingSchema**: `TLoadSchema`
 
-Defined in: [packages/core/src/cms.ts:60](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L60)
+Defined in: [packages/core/src/cms.ts:60](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L60)
 
 ***
 
@@ -63,7 +55,7 @@ Defined in: [packages/core/src/cms.ts:60](https://github.com/bitswired/foldcms/b
 
 > `readonly` **relations**: `TRelations`
 
-Defined in: [packages/core/src/cms.ts:69](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L69)
+Defined in: [packages/core/src/cms.ts:77](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L77)
 
 ***
 
@@ -71,25 +63,25 @@ Defined in: [packages/core/src/cms.ts:69](https://github.com/bitswired/foldcms/b
 
 > `readonly` **transformedSchema**: `TTransformSchema`
 
-Defined in: [packages/core/src/cms.ts:61](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L61)
+Defined in: [packages/core/src/cms.ts:61](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L61)
 
 ***
 
 ### transformer()
 
-> `readonly` **transformer**: (`data`) => `Effect`\<`TTransformed`, [`TransformationError`](/api/cms/classes/transformationerror/), `TTransformerDeps`\>
+> `readonly` **transformer**: (`data`) => `Effect`\<`Type`\<`TTransformSchema`\>, [`TransformationError`](/api/cms/classes/transformationerror/), `TTransformerDeps`\>
 
-Defined in: [packages/core/src/cms.ts:63](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L63)
+Defined in: [packages/core/src/cms.ts:67](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L67)
 
 #### Parameters
 
 ##### data
 
-`TLoaded`
+`Type`\<`TLoadSchema`\>
 
 #### Returns
 
-`Effect`\<`TTransformed`, [`TransformationError`](/api/cms/classes/transformationerror/), `TTransformerDeps`\>
+`Effect`\<`Type`\<`TTransformSchema`\>, [`TransformationError`](/api/cms/classes/transformationerror/), `TTransformerDeps`\>
 
 ***
 
@@ -97,13 +89,13 @@ Defined in: [packages/core/src/cms.ts:63](https://github.com/bitswired/foldcms/b
 
 > `readonly` **validator**: (`data`) => `Effect`\<`void`, [`ValidationError`](/api/cms/classes/validationerror/), `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:66](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L66)
+Defined in: [packages/core/src/cms.ts:74](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L74)
 
 #### Parameters
 
 ##### data
 
-`TTransformed`
+`Type`\<`TTransformSchema`\>
 
 #### Returns
 

@@ -9,13 +9,13 @@ title: "defineCollection"
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `never`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:77](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L77)
+Defined in: [packages/core/src/cms.ts:85](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L85)
 
 ### Type Parameters
 
 #### TLoadSchema
 
-`TLoadSchema` *extends* `AnyStruct`
+`TLoadSchema` *extends* `AnySchema`
 
 #### TRelations
 
@@ -65,13 +65,13 @@ Defined in: [packages/core/src/cms.ts:77](https://github.com/bitswired/foldcms/b
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:107](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L107)
+Defined in: [packages/core/src/cms.ts:115](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L115)
 
 ### Type Parameters
 
 #### TLoadSchema
 
-`TLoadSchema` *extends* `AnyStruct`
+`TLoadSchema` *extends* `AnySchema`
 
 #### TRelations
 
@@ -125,17 +125,17 @@ Defined in: [packages/core/src/cms.ts:107](https://github.com/bitswired/foldcms/
 
 > **defineCollection**\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:144](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L144)
+Defined in: [packages/core/src/cms.ts:152](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L152)
 
 ### Type Parameters
 
 #### TLoadSchema
 
-`TLoadSchema` *extends* `AnyStruct`
+`TLoadSchema` *extends* `AnySchema`
 
 #### TTransformSchema
 
-`TTransformSchema` *extends* `AnyStruct`
+`TTransformSchema` *extends* `AnySchema`
 
 #### TRelations
 

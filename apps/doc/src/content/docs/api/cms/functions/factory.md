@@ -7,7 +7,7 @@ title: "factory"
 
 > **factory**\<`TMap`, `TCollection`\>(): `Tag`\<[`Cms`](/api/cms/interfaces/cms/)\<`TMap`, `TCollection`, `CmsError` \| `ContentStoreError`\>, [`Cms`](/api/cms/interfaces/cms/)\<`TMap`, `TCollection`, `CmsError` \| `ContentStoreError`\>\>
 
-Defined in: [packages/core/src/cms.ts:391](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L391)
+Defined in: [packages/core/src/cms.ts:353](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L353)
 
 ## Type Parameters
 

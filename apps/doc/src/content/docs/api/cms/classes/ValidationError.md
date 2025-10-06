@@ -5,7 +5,7 @@ prev: false
 title: "ValidationError"
 ---
 
-Defined in: [packages/core/src/cms.ts:27](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L27)
+Defined in: [packages/core/src/cms.ts:29](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L29)
 
 ## Extends
 
@@ -119,7 +119,7 @@ The cause of the error.
 
 > `readonly` **issues**: readonly `string`[]
 
-Defined in: [packages/core/src/cms.ts:29](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L29)
+Defined in: [packages/core/src/cms.ts:31](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L31)
 
 #### Inherited from
 

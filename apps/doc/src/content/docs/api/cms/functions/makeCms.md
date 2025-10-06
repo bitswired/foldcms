@@ -7,7 +7,7 @@ title: "makeCms"
 
 > **makeCms**\<`TMap`, `TCollection`\>(`config`): `object`
 
-Defined in: [packages/core/src/cms.ts:396](https://github.com/bitswired/foldcms/blob/1c891e1138f693233aa186873facbdb8139365a8/packages/core/src/cms.ts#L396)
+Defined in: [packages/core/src/cms.ts:358](https://github.com/bitswired/foldcms/blob/92f893e734b1102683a12bd11c6183cc24996bdf/packages/core/src/cms.ts#L358)
 
 ## Type Parameters
 
