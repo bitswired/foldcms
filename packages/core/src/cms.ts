@@ -1,3 +1,6 @@
+/** biome-ignore-all lint/suspicious/noExplicitAny: library internals */
+
+import { createHash } from "node:crypto";
 import { SqlClient } from "@effect/sql";
 import {
 	Context,
@@ -12,7 +15,6 @@ import {
 	Schema,
 	Stream,
 } from "effect";
-import { createHash } from "node:crypto";
 
 export class LoadingError extends Data.TaggedError("LoadingError")<{
 	message: string;
@@ -86,7 +88,7 @@ export function defineCollection<
 	TLoadSchema extends AnySchema,
 	const TRelations extends Partial<
 		Record<keyof Schema.Schema.Type<TLoadSchema>, CollectionRelation>
-	> = {},
+	>,
 	TLoaderDeps = never,
 	TValidatorDeps = never,
 >(config: {
@@ -116,7 +118,7 @@ export function defineCollection<
 	TLoadSchema extends AnySchema,
 	const TRelations extends Partial<
 		Record<keyof Schema.Schema.Type<TLoadSchema>, CollectionRelation>
-	> = {},
+	>,
 	TLoaderDeps = never,
 	TTransformerDeps = never,
 	TValidatorDeps = never,
@@ -154,7 +156,7 @@ export function defineCollection<
 	TTransformSchema extends AnySchema,
 	const TRelations extends Partial<
 		Record<keyof Schema.Schema.Type<TTransformSchema>, CollectionRelation>
-	> = {},
+	>,
 	TLoaderDeps = never,
 	TTransformerDeps = never,
 	TValidatorDeps = never,

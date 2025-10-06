@@ -1,5 +1,5 @@
-import { SqliteClient } from "@effect/sql-sqlite-bun";
 import { afterEach, beforeEach, expect, test } from "bun:test";
+import { SqliteClient } from "@effect/sql-sqlite-bun";
 import { Effect, Layer, ManagedRuntime, Option, Schema, Stream } from "effect";
 import { build, defineCollection, makeCms, SqlContentStore } from "../src/cms";
 
