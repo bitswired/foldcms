@@ -4,6 +4,7 @@ export default defineConfig({
 	entry: {
 		index: "src/cms.ts",
 		loaders: "src/loaders.ts",
+		utils: "src/utils.ts",
 	},
 	format: ["esm"],
 	dts: {

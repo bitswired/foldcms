@@ -9,7 +9,6 @@ import { LoadingError } from "./cms";
 type AnyStruct = Schema.Struct<any>;
 
 const streamFiles = (config: {
-	baseDir: string;
 	folder: string;
 	filter: (filename: string) => boolean;
 }) =>
@@ -18,13 +17,13 @@ const streamFiles = (config: {
 			const fs = yield* FileSystem.FileSystem;
 			const path = yield* Path.Path;
 
-			return fs.readDirectory(path.join(config.baseDir, config.folder)).pipe(
+			return fs.readDirectory(path.join(config.folder)).pipe(
 				Effect.map((x) => x.filter((file) => config.filter(file))),
 				Effect.flatMap((result) => {
 					if (result.length === 0) {
 						return Effect.fail(
 							new LoadingError({
-								message: `No JSON files found in directory: ${path.join(config.baseDir, config.folder)}`,
+								message: `No JSON files found in directory: ${path.join(config.folder)}`,
 							}),
 						);
 					}
@@ -32,7 +31,7 @@ const streamFiles = (config: {
 				}),
 				Stream.fromIterableEffect,
 				Stream.mapEffect((file) =>
-					fs.readFileString(path.join(config.baseDir, config.folder, file)),
+					fs.readFileString(path.join(config.folder, file)),
 				),
 			);
 		}),
@@ -41,7 +40,7 @@ const streamFiles = (config: {
 
 export const jsonFilesLoader = <T extends AnyStruct>(
 	schema: T,
-	config: { baseDir: string; folder: string },
+	config: { folder: string },
 ) =>
 	pipe(
 		streamFiles({
@@ -55,7 +54,7 @@ export const jsonFilesLoader = <T extends AnyStruct>(
 
 export const jsonLinesLoader = <T extends AnyStruct>(
 	schema: T,
-	config: { baseDir: string; folder: string },
+	config: { folder: string },
 ) =>
 	pipe(
 		streamFiles({
@@ -72,7 +71,7 @@ export const jsonLinesLoader = <T extends AnyStruct>(
 
 export const yamlFilesLoader = <T extends AnyStruct>(
 	schema: T,
-	config: { baseDir: string; folder: string },
+	config: { folder: string },
 ) =>
 	pipe(
 		streamFiles({
@@ -87,7 +86,7 @@ export const yamlFilesLoader = <T extends AnyStruct>(
 
 export const yamlStreamLoader = <T extends AnyStruct>(
 	schema: T,
-	config: { baseDir: string; folder: string },
+	config: { folder: string },
 ) =>
 	pipe(
 		streamFiles({
@@ -105,7 +104,6 @@ export const yamlStreamLoader = <T extends AnyStruct>(
 export const mdxLoader = <T extends AnyStruct>(
 	schema: T,
 	config: {
-		baseDir: string;
 		folder: string;
 		bundlerOptions: Omit<Parameters<typeof bundleMDX>[0], "source" | "file">;
 		exports?: string[];

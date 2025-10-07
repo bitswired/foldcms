@@ -16,8 +16,7 @@ const expectedData = [
 test("loads JSON collection from files", async () => {
 	const program = loaders
 		.jsonFilesLoader(schema, {
-			baseDir: "tests/data",
-			folder: "json-files-loader",
+			folder: "tests/data/json-files-loader",
 		})
 		.pipe(
 			Stream.runCollect,
@@ -27,7 +26,6 @@ test("loads JSON collection from files", async () => {
 	const res = await Effect.runPromise(
 		program.pipe(Effect.provide(BunContext.layer)),
 	);
-
 	expect(res).toEqual(expect.arrayContaining(expectedData));
 	expect(res).toHaveLength(expectedData.length);
 });
@@ -35,8 +33,7 @@ test("loads JSON collection from files", async () => {
 test("loads JSON collection from lines file", async () => {
 	const program = loaders
 		.jsonLinesLoader(schema, {
-			baseDir: "tests/data",
-			folder: "json-lines-loader",
+			folder: "tests/data/json-lines-loader",
 		})
 		.pipe(
 			Stream.runCollect,
@@ -54,8 +51,7 @@ test("loads JSON collection from lines file", async () => {
 test("loads YAML collection from files", async () => {
 	const program = loaders
 		.yamlFilesLoader(schema, {
-			baseDir: "tests/data",
-			folder: "yaml-files-loader",
+			folder: "tests/data/yaml-files-loader",
 		})
 		.pipe(
 			Stream.runCollect,
@@ -73,8 +69,7 @@ test("loads YAML collection from files", async () => {
 test("loads YAML collection from stream file", async () => {
 	const program = loaders
 		.yamlStreamLoader(schema, {
-			baseDir: "tests/data",
-			folder: "yaml-stream-loader",
+			folder: "tests/data/yaml-stream-loader",
 		})
 		.pipe(
 			Stream.runCollect,
@@ -106,8 +101,7 @@ test("loads MDX collection from files", async () => {
 				}),
 			}),
 			{
-				baseDir: "tests/data",
-				folder: "mdx-loader",
+				folder: "tests/data/mdx-loader",
 				bundlerOptions: {},
 				exports: ["data"],
 			},

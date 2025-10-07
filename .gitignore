@@ -40,3 +40,4 @@ yarn-error.log*
 .old
 .jj
 .vscode
+scratchpad.ts

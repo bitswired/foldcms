@@ -13,6 +13,10 @@
 		"./loaders": {
 			"types": "./dist/loaders.d.ts",
 			"import": "./dist/loaders.js"
+		},
+		"./utils": {
+			"types": "./dist/utils.d.ts",
+			"import": "./dist/utils.js"
 		}
 	},
 	"private": false,
@@ -27,6 +31,7 @@
 		"tsup": "^8.5.0"
 	},
 	"peerDependencies": {
+		"@aws-sdk/client-s3": "^3.901.0",
 		"@effect/platform": "^0.92.1",
 		"effect": "^3.18.1",
 		"esbuild": "^0.25.10",
