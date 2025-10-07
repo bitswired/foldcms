@@ -1,5 +1,11 @@
 # @foldcms/core
 
+## 0.3.1
+
+### Patch Changes
+
+- 95183c8: Fix core README
+
 ## 0.3.0
 
 ### Minor Changes
