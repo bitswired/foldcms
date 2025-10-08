@@ -1,0 +1,209 @@
+---
+import { Image } from "astro:assets";
+import { Code } from "astro:components";
+import { ArrowRight } from "lucide-react";
+import Layout from "../components/Layout.astro";
+import { features, hero, problemSolution } from "../components/landing/content";
+import { Button } from "../components/ui/button";
+---
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Find all tab containers
+        const tabContainers = document.querySelectorAll("[data-tabs]");
+
+        tabContainers.forEach((container) => {
+            const headers = container.querySelectorAll(
+                "[data-tabs-headers] [data-tabs-key]",
+            );
+            const contents = container.querySelectorAll("[data-tab-content]");
+
+            headers.forEach((header) => {
+                header.addEventListener("click", function () {
+                    const selectedTabId = this.getAttribute("data-tabs-key");
+
+                    // Update the selected tab in the container
+                    container.setAttribute("data-tabs-selected", selectedTabId);
+
+                    // Update active state for headers
+                    headers.forEach((h) => {
+                        if (h.getAttribute("data-tabs-key") === selectedTabId) {
+                            h.classList.remove(
+                                "border-transparent",
+                                "text-gray-600",
+                            );
+                            h.classList.add("border-blue-500", "text-blue-600");
+                        } else {
+                            h.classList.remove(
+                                "border-blue-500",
+                                "text-blue-600",
+                            );
+                            h.classList.add(
+                                "border-transparent",
+                                "text-gray-600",
+                            );
+                        }
+                    });
+
+                    // Update content visibility
+                    contents.forEach((content) => {
+                        if (
+                            content.getAttribute("data-tabs-key") ===
+                            selectedTabId
+                        ) {
+                            content.classList.remove("hidden");
+                            content.classList.add("block");
+                        } else {
+                            content.classList.remove("block");
+                            content.classList.add("hidden");
+                        }
+                    });
+                });
+            });
+        });
+    });
+</script>
+
+<Layout>
+    <section
+        id="hero"
+        class="flex flex-col flex-wrap justify-center gap-8 items-center mt-32"
+    >
+        <div class="space-y-8 text-center">
+            <h1 class="text-4xl">
+                {hero.headline}
+            </h1>
+            <p class="text-2xl max-w-[50ch]">
+                {hero.subheadline}
+            </p>
+            <Button size="lg" className="text-2xl px-4 py-8 font-light">
+                <a href={hero.cta.primary.href} class="flex gap-2 items-center">
+                    {hero.cta.primary.text}
+                </a>
+                <ArrowRight className="size-6" />
+            </Button>
+        </div>
+        <Code
+            code={hero.codeExample.trim()}
+            lang="ts"
+            theme="dracula"
+            class="p-8 w-max rounded-md"
+        />
+
+        <div class="flex gap-8">
+            {
+                hero.trustIndicators.map((indicator) => (
+                    <div>
+                        <span class="text-lg">{indicator.text}</span>
+                        <Image
+                            class="hidden"
+                            src={indicator.icon}
+                            alt="A rocketship in space."
+                        />
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+
+    <section
+        id="problem-solution"
+        class="flex flex-col justify-center gap-12 items-center mt-32"
+    >
+        <h2 class="text-3xl">
+            Content Management Shouldn't Fight Your Build Process
+        </h2>
+
+        <div class="flex gap-16 w-full justify-center">
+            {
+                problemSolution.cards.map((card) => (
+                    <div class="max-w-[300px] space-y-4">
+                        <p class="text-xl">{card.title}</p>
+                        <p class="text-lg">{card.solution}</p>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+
+    <section
+        id="feature-showcase"
+        class="flex flex-wrap justify-center gap-4 items-center mt-32"
+    >
+        <h2 class="text-3-xl">Feature Showcase</h2>
+
+        <div data-tabs data-tabs-selected={features.tabs[0].id}>
+            <div data-tabs-headers class="flex gap-4">
+                {
+                    features.tabs.map((tab, index) => (
+                        <div
+                            data-tabs-key={tab.id}
+                            class={`cursor-pointer px-4 py-2 border-b-2 transition-colors ${
+                                index === 0
+                                    ? "border-blue-500 text-blue-600"
+                                    : "border-transparent text-gray-600"
+                            }`}
+                        >
+                            {tab.id}
+                        </div>
+                    ))
+                }
+            </div>
+            <div>
+                {
+                    features.tabs.map((tab, index) => (
+                        <div
+                            class={`flex flex-col items-center gap-4 ${
+                                index === 0 ? "block" : "hidden"
+                            }`}
+                            data-tabs-key={tab.id}
+                            data-tab-content
+                        >
+                            <p class="max-w-[600px] text-center text-2xl">
+                                {tab.headline}
+                            </p>
+                            <p class="max-w-[400px] text-center text-xl">
+                                {tab.description}
+                            </p>
+                            <Code
+                                code={tab.codeExample.trim()}
+                                lang="ts"
+                                theme="dracula"
+                                class="p-8 w-max rounded-md"
+                            />
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section
+        id="built-with-effect"
+        class="flex flex-wrap justify-center gap-4 items-center mt-32"
+    >
+        <h2 class="text-3-xl">Built With Effect</h2>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <section
+        id="built-with-effect"
+        class="flex flex-wrap justify-center gap-4 items-center mt-32"
+    >
+        <h2 class="text-3-xl">Use Cases</h2>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+</Layout>

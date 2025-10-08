@@ -7,7 +7,7 @@ title: "jsonFilesLoader"
 
 > **jsonFilesLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:67](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/loaders.ts#L67)
+Defined in: [packages/core/src/loaders.ts:67](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/loaders.ts#L67)
 
 Loads and parses JSON files from a directory, validating each file against a schema.
 

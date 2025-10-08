@@ -1,0 +1,6 @@
+id: cat-smartphones
+name: Smartphones
+slug: smartphones
+description: Modern smartphones and mobile devices
+icon: 📱
+parentId: cat-electronics

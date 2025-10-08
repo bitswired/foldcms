@@ -1,0 +1,6 @@
+id: cat-laptops
+name: Laptops
+slug: laptops
+description: Professional and gaming laptops
+icon: 💻
+parentId: cat-electronics

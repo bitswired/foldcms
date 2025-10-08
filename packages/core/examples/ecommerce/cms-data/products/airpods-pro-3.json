@@ -1,0 +1,24 @@
+{
+	"id": "prod-airpods-pro-3",
+	"sku": "APPL-APP3-USB",
+	"name": "AirPods Pro (3rd generation)",
+	"slug": "airpods-pro-3",
+	"description": "Next-generation noise cancellation with Adaptive Audio. USB-C charging and improved battery life. Premium sound quality.",
+	"price": 249,
+	"currency": "USD",
+	"stock": 156,
+	"categoryId": "cat-accessories",
+	"tagIds": ["tag-wireless", "tag-premium"],
+	"images": ["/products/airpods-pro-3.jpg", "/products/airpods-case.jpg"],
+	"specifications": {
+		"driver": "Custom Apple driver",
+		"connectivity": "Bluetooth 5.3",
+		"battery": "6 hours (30 hours with case)",
+		"features": "Adaptive Audio, Active Noise Cancellation, Transparency Mode",
+		"charging": "USB-C, Qi wireless",
+		"water_resistance": "IPX4"
+	},
+	"featured": false,
+	"available": true,
+	"publishedAt": "2024-09-15T11:00:00Z"
+}

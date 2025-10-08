@@ -5,7 +5,7 @@ prev: false
 title: "Cms"
 ---
 
-Defined in: [packages/core/src/cms.ts:402](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L402)
+Defined in: [packages/core/src/cms.ts:402](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L402)
 
 Core CMS interface that provides type-safe content management operations.
 Manages collections of typed content with support for relationships.
@@ -53,7 +53,7 @@ Union of possible error types
 
 > **collections**: `TCollection`
 
-Defined in: [packages/core/src/cms.ts:408](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L408)
+Defined in: [packages/core/src/cms.ts:408](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L408)
 
 The collection definitions managed by this CMS instance
 
@@ -63,7 +63,7 @@ The collection definitions managed by this CMS instance
 
 > **getAll**: \<`TName`\>(`collectionName`) => `Effect`\<readonly `CollectionParts`\<`TCollection`\[`TName`\]\>\[`"transformed"`\][], `TError`\>
 
-Defined in: [packages/core/src/cms.ts:431](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L431)
+Defined in: [packages/core/src/cms.ts:431](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L431)
 
 Retrieves all items from a collection.
 
@@ -93,7 +93,7 @@ Effect yielding an array of all items in the collection
 
 > **getById**: \<`TName`\>(`collectionName`, `id`) => `Effect`\<`Option`\<`CollectionParts`\<`TCollection`\[`TName`\]\>\[`"transformed"`\]\>, `TError`\>
 
-Defined in: [packages/core/src/cms.ts:417](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L417)
+Defined in: [packages/core/src/cms.ts:417](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L417)
 
 Retrieves a single item from a collection by its ID.
 
@@ -129,7 +129,7 @@ Effect yielding an Option containing the item if found
 
 > **loadRelation**: \<`TSourceName`, `TField`\>(`sourceCollection`, `item`, `field`) => `Effect`\<`RelationReturnType`\<`RelationAt`\<`CollectionParts`\<`TCollection`\[`TSourceName`\]\>\[`"relations"`\], `TField`\>, `TCollection`\>, `TError`\>
 
-Defined in: [packages/core/src/cms.ts:447](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L447)
+Defined in: [packages/core/src/cms.ts:447](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L447)
 
 Loads related data for a specific field on an item.
 Resolves relationships defined in the collection configuration.

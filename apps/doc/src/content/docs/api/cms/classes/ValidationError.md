@@ -5,7 +5,7 @@ prev: false
 title: "ValidationError"
 ---
 
-Defined in: [packages/core/src/cms.ts:65](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L65)
+Defined in: [packages/core/src/cms.ts:65](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L65)
 
 Error thrown when data validation fails during collection processing.
 Contains detailed information about validation issues.
@@ -131,7 +131,7 @@ The cause of the error.
 
 > `readonly` **issues**: readonly `string`[]
 
-Defined in: [packages/core/src/cms.ts:67](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L67)
+Defined in: [packages/core/src/cms.ts:67](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L67)
 
 #### Inherited from
 

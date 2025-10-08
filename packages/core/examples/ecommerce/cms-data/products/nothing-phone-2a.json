@@ -1,0 +1,24 @@
+{
+	"id": "prod-nothing-2a",
+	"sku": "NTHN-PH2A-256",
+	"name": "Nothing Phone (2a)",
+	"slug": "nothing-phone-2a",
+	"description": "Distinctive design with Glyph Interface. Powerful performance at an incredible price. Pure Android experience with unique personality.",
+	"price": 349,
+	"currency": "USD",
+	"stock": 89,
+	"categoryId": "cat-smartphones",
+	"tagIds": ["tag-5g", "tag-budget", "tag-innovation"],
+	"images": ["/products/nothing-2a-glyph.jpg", "/products/nothing-2a-back.jpg"],
+	"specifications": {
+		"display": "6.7\" AMOLED 120Hz",
+		"processor": "MediaTek Dimensity 7200 Pro",
+		"ram": "8GB",
+		"storage": "256GB",
+		"battery": "5000mAh",
+		"camera": "50MP main + 50MP ultrawide"
+	},
+	"featured": false,
+	"available": true,
+	"publishedAt": "2024-08-10T12:00:00Z"
+}

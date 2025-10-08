@@ -1,36 +1,273 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: FoldCMS
+description: Type-safe static CMS powered by Effect and SQLite
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Build content-rich applications with full type safety, access at build time as well as runtime, and the power of Effect.
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /guides/getting-started/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/bitswired/foldcms
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid, Code, LinkCard, TabItem, Tabs } from '@astrojs/starlight/components';
 
-## Next steps
+## Why FoldCMS?
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="🎯 Full Type Safety" icon="approve-check">
+    End-to-end type safety powered by Effect Schema. Your editor knows your content structure better than you do. No codegen, no manual types—just pure TypeScript elegance.
+  </Card>
+  
+  <Card title="⚡ Zero Runtime Cost" icon="rocket">
+    Build once, query instantly. All content compiled to SQLite at build time. No GraphQL layers, no API calls, no runtime overhead. Just blazingly fast queries.
+  </Card>
+  
+  <Card title="🗄️ SQLite Performance" icon="star">
+    Efficient querying with automatic indexing. Orders of magnitude faster than file system reads. Your content is always ready, always fast.
+  </Card>
+  
+  <Card title="🔗 Type-Safe Relations" icon="puzzle">
+    Define relationships between collections with complete type inference. Single, array, and map relations—all fully typed. TypeScript knows the exact return type of every query.
+  </Card>
 </CardGrid>
+
+---
+
+## See It In Action
+
+<Tabs>
+  <TabItem label="Define Schema">
+    <Code code={`import { Schema } from "effect";
+
+const PostSchema = Schema.Struct({
+  id: Schema.String,
+  title: Schema.String,
+  authorId: Schema.String,
+  tags: Schema.Array(Schema.String),
+  publishedAt: Schema.DateFromString,
+});`} lang="typescript" title="schemas.ts" theme="dracula" />
+  </TabItem>
+  
+  <TabItem label="Create Collection">
+    <Code code={`import { defineCollection } from "@foldcms/core";
+import { jsonFilesLoader } from "@foldcms/core/loaders";
+
+const posts = defineCollection({
+  loadingSchema: PostSchema,
+  loader: jsonFilesLoader(PostSchema, {
+    folder: "content/posts"
+  }),
+  relations: {
+    authorId: {
+      type: "single",
+      field: "authorId", 
+      target: "authors"
+    }
+  }
+});`} lang="typescript" title="collections.ts" theme="dracula" />
+  </TabItem>
+  
+  <TabItem label="Query Content">
+    <Code code={`const cms = yield* CmsTag;
+
+// Get all posts - fully typed!
+const posts = yield* cms.getAll("posts");
+//    ^? readonly Post[]
+
+// Get specific post
+const post = yield* cms.getById("posts", "hello-world");
+//    ^? Option<Post>
+
+// Load relations with type safety
+const author = yield* cms.loadRelation("posts", post, "authorId");
+//    ^? Option<Author>`} lang="typescript" title="queries.ts" theme="dracula" />
+  </TabItem>
+</Tabs>
+
+---
+
+## Built-in Loaders
+
+<CardGrid>
+  <Card title="JSON Files" icon="document">
+    Perfect for structured data like products, authors, and configuration.
+    
+    <Code code={`jsonFilesLoader(ProductSchema, {
+  folder: "content/products"
+})`} lang="typescript" theme="dracula" />
+  </Card>
+  
+  <Card title="YAML Files" icon="document">
+    Human-friendly format for categories, tags, and settings.
+    
+    <Code code={`yamlFilesLoader(CategorySchema, {
+  folder: "content/categories"
+})`} lang="typescript" theme="dracula" />
+  </Card>
+  
+  <Card title="MDX" icon="document">
+    Rich content with frontmatter, code blocks, and React components.
+    
+    <Code code={`mdxLoader(BlogPostSchema, {
+  folder: "content/blog",
+  bundlerOptions: {}
+})`} lang="typescript" theme="dracula" />
+  </Card>
+  
+  <Card title="Custom Loaders" icon="add-document">
+    Stream-based API for loading from anywhere: databases, APIs, or custom formats.
+    
+    <Code code={`Stream.fromIterableEffect(
+  Effect.tryPromise(() => 
+    fetch("/api/data")
+  )
+)`} lang="typescript" theme="dracula" />
+  </Card>
+</CardGrid>
+
+---
+
+## Three Types of Relations
+
+FoldCMS supports powerful, type-safe relationships between your content:
+
+<CardGrid>
+  <Card title="Single Relations" icon="right-arrow">
+    One-to-one relationships. Returns `Option<T>`.
+    
+    ```typescript
+    relations: {
+      authorId: {
+        type: "single",
+        field: "authorId",
+        target: "authors"
+      }
+    }
+    ```
+  </Card>
+  
+  <Card title="Array Relations" icon="list-format">
+    One-to-many relationships. Returns `readonly T[]`.
+    
+    ```typescript
+    relations: {
+      tagIds: {
+        type: "array",
+        field: "tagIds",
+        target: "tags"
+      }
+    }
+    ```
+  </Card>
+  
+  <Card title="Map Relations" icon="puzzle">
+    Key-value relationships. Returns `ReadonlyMap<string, T>`.
+    
+    ```typescript
+    relations: {
+      translations: {
+        type: "map",
+        field: "i18nMap",
+        target: "content"
+      }
+    }
+    ```
+  </Card>
+</CardGrid>
+
+---
+
+## Works With Your Stack
+
+<CardGrid>
+  <LinkCard title="Astro" href="https://astro.build" description="Perfect for content-driven sites" />
+  <LinkCard title="Next.js" href="https://nextjs.org" description="SSG, ISR, and Server Components" />
+  <LinkCard title="Remix" href="https://remix.run" description="Type-safe loader functions" />
+  <LinkCard title="SvelteKit" href="https://kit.svelte.dev" description="Server-side data loading" />
+</CardGrid>
+
+FoldCMS is framework-agnostic. Build once during deployment, query anywhere in your application.
+
+---
+
+## Powered by Effect
+
+Built on [Effect](https://effect.website), the most powerful TypeScript framework for building robust applications.
+
+<CardGrid stagger>
+  <Card title="Composable" icon="puzzle">
+    Build complex workflows from simple, reusable pieces. Effect's composition model makes your CMS logic readable and maintainable.
+  </Card>
+  
+  <Card title="Testable" icon="approve-check">
+    Pure functional architecture means testing is effortless. No mocks, no stubs—just supply dependencies and validate outputs.
+  </Card>
+  
+  <Card title="Reliable" icon="star">
+    Structured errors instead of thrown exceptions. Know exactly what can fail and handle it elegantly with `LoadingError`, `ValidationError`, and `TransformationError`.
+  </Card>
+</CardGrid>
+
+---
+
+## Quick Start
+
+<Code code={`# Install FoldCMS
+bun add @foldcms/core effect @effect/platform @effect/sql-sqlite-bun
+
+# Create your first collection
+import { defineCollection, makeCms, build } from "@foldcms/core";
+import { jsonFilesLoader } from "@foldcms/core/loaders";
+
+const posts = defineCollection({
+  loadingSchema: PostSchema,
+  loader: jsonFilesLoader(PostSchema, { folder: "content/posts" })
+});
+
+const { CmsTag, CmsLayer } = makeCms({ collections: { posts } });
+
+// Build and query
+yield* build({ collections: { posts } });
+const cms = yield* CmsTag;
+const allPosts = yield* cms.getAll("posts");`} lang="typescript" title="Get started in minutes" theme="dracula" />
+
+<LinkCard
+  title="Read the Getting Started Guide →"
+  href="/guides/getting-started/"
+  description="Build a complete e-commerce CMS in 10 minutes"
+/>
+
+---
+
+## Features at a Glance
+
+- **🎯 Type-Safe Schemas** - Effect Schema for runtime validation + TypeScript types
+- **⚡ Stream-Based Loading** - Efficient data processing with Effect Streams  
+- **🗄️ SQLite Storage** - Fast queries with automatic indexing
+- **🔗 Typed Relations** - Single, array, and map relations with full type inference
+- **📦 Multiple Loaders** - JSON, YAML, MDX, JSON Lines, and custom loaders
+- **🔄 Transformations** - Transform data during loading with Effect pipelines
+- **✅ Validation** - Custom validation rules that run at build time
+- **☁️ Asset Sync** - Built-in utilities for syncing to S3-compatible storage
+- **🧪 Testable** - Effect-based architecture makes testing trivial
+- **📝 Open Source** - MIT licensed and community-driven
+
+---
+
+<Card title="Ready to build something amazing?" icon="rocket">
+  Get started with FoldCMS today and experience content management with full type safety, zero runtime cost, and the power of Effect.
+  
+  <div style="margin-top: 1rem;">
+    <a href="/guides/getting-started/" style="text-decoration: none;">
+      <strong>Get Started →</strong>
+    </a>
+  </div>
+</Card>

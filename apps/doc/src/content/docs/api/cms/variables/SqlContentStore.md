@@ -7,7 +7,7 @@ title: "SqlContentStore"
 
 > `const` **SqlContentStore**: `Layer`\<[`ContentStore`](/api/cms/classes/contentstore/), `SqlError`, `SqlClient`\>
 
-Defined in: [packages/core/src/cms.ts:854](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L854)
+Defined in: [packages/core/src/cms.ts:854](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L854)
 
 SQL-based implementation of the ContentStore service using Effect SQL.
 Provides persistent storage for CMS content with SQLite/PostgreSQL/MySQL compatibility.

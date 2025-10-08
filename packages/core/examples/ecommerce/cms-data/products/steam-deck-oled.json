@@ -1,0 +1,27 @@
+{
+	"id": "prod-steam-deck-oled",
+	"sku": "VALVE-SD-OLED-512",
+	"name": "Steam Deck OLED",
+	"slug": "steam-deck-oled",
+	"description": "The ultimate portable gaming PC. Gorgeous 7.4\" HDR OLED screen, improved battery life, and access to your entire Steam library.",
+	"price": 549,
+	"currency": "USD",
+	"stock": 67,
+	"categoryId": "cat-electronics",
+	"tagIds": ["tag-gaming", "tag-innovation"],
+	"images": [
+		"/products/steam-deck-oled-front.jpg",
+		"/products/steam-deck-gaming.jpg"
+	],
+	"specifications": {
+		"display": "7.4\" HDR OLED touchscreen",
+		"processor": "Custom AMD APU",
+		"ram": "16GB LPDDR5",
+		"storage": "512GB NVMe SSD",
+		"battery": "50Wh (3-12 hours)",
+		"weight": "640g"
+	},
+	"featured": true,
+	"available": true,
+	"publishedAt": "2024-09-20T14:00:00Z"
+}

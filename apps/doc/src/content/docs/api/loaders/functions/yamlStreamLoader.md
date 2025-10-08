@@ -7,7 +7,7 @@ title: "yamlStreamLoader"
 
 > **yamlStreamLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:181](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/loaders.ts#L181)
+Defined in: [packages/core/src/loaders.ts:181](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/loaders.ts#L181)
 
 Loads and parses YAML files containing multiple documents, validating each document against a schema.
 Supports both .yaml and .yml file extensions. Each file can contain multiple YAML documents separated by `---`.

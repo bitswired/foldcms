@@ -5,7 +5,7 @@ prev: false
 title: "TransformationError"
 ---
 
-Defined in: [packages/core/src/cms.ts:46](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L46)
+Defined in: [packages/core/src/cms.ts:46](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L46)
 
 Error thrown when data transformation fails during collection processing.
 

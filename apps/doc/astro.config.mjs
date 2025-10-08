@@ -1,19 +1,27 @@
 // @ts-check
 
+import react from "@astrojs/react";
 import starlight from "@astrojs/starlight";
+import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import starlightLlmsTxt from "starlight-llms-txt";
 import starlightTypeDoc, { typeDocSidebarGroup } from "starlight-typedoc";
 
-// https://astro.build/config
 export default defineConfig({
 	site: "https://foldcms.dev",
+
 	build: {
 		assets: "assets",
 	},
+
 	integrations: [
+		react(),
 		starlight({
 			title: "FoldCMS",
+			customCss: ["./src/styles/global.css"],
+			expressiveCode: {
+				themes: ["dracula"],
+			},
 			social: [
 				{
 					icon: "github",
@@ -38,7 +46,7 @@ export default defineConfig({
 					label: "Guides",
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: "Example Guide", slug: "guides/example" },
+						{ label: "Getting Started", slug: "guides/getting-started" },
 					],
 				},
 				typeDocSidebarGroup,
@@ -49,4 +57,8 @@ export default defineConfig({
 			],
 		}),
 	],
+
+	vite: {
+		plugins: [tailwindcss()],
+	},
 });

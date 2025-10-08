@@ -1,0 +1,24 @@
+{
+	"id": "prod-framework-16",
+	"sku": "FRMWRK-16-AMD",
+	"name": "Framework Laptop 16",
+	"slug": "framework-laptop-16",
+	"description": "The world's first truly modular laptop. Upgrade, repair, and customize everything. AMD Ryzen 7 7840HS with optional discrete GPU.",
+	"price": 1399,
+	"currency": "USD",
+	"stock": 34,
+	"categoryId": "cat-laptops",
+	"tagIds": ["tag-innovation", "tag-sustainable", "tag-productivity"],
+	"images": ["/products/framework-16.jpg", "/products/framework-modular.jpg"],
+	"specifications": {
+		"display": "16\" 2560x1600 165Hz",
+		"processor": "AMD Ryzen 7 7840HS",
+		"ram": "32GB DDR5",
+		"storage": "1TB NVMe SSD",
+		"gpu": "AMD Radeon RX 7700S (optional)",
+		"ports": "Fully customizable expansion cards"
+	},
+	"featured": true,
+	"available": true,
+	"publishedAt": "2024-10-01T08:00:00Z"
+}

@@ -1,0 +1,24 @@
+{
+	"id": "prod-macbook-pro-m4",
+	"sku": "APPL-MBP-M4-14",
+	"name": "MacBook Pro 14\" M4",
+	"slug": "macbook-pro-14-m4",
+	"description": "The most powerful MacBook Pro ever. M4 chip delivers incredible performance for professionals. Stunning Liquid Retina XDR display.",
+	"price": 1999,
+	"currency": "USD",
+	"stock": 23,
+	"categoryId": "cat-laptops",
+	"tagIds": ["tag-premium", "tag-productivity", "tag-innovation"],
+	"images": ["/products/macbook-pro-m4.jpg", "/products/macbook-pro-ports.jpg"],
+	"specifications": {
+		"display": "14.2\" Liquid Retina XDR",
+		"processor": "Apple M4",
+		"ram": "16GB",
+		"storage": "512GB SSD",
+		"battery": "Up to 18 hours",
+		"ports": "3x Thunderbolt 4, HDMI, MagSafe 3"
+	},
+	"featured": true,
+	"available": true,
+	"publishedAt": "2024-11-01T09:00:00Z"
+}

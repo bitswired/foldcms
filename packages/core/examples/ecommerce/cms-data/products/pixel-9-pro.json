@@ -1,0 +1,27 @@
+{
+	"id": "prod-pixel-9-pro",
+	"sku": "GOOG-PIX9P-128",
+	"name": "Google Pixel 9 Pro",
+	"slug": "google-pixel-9-pro",
+	"description": "Experience the power of Google AI in a premium smartphone. 6.7\" OLED display, advanced camera system, and all-day battery life.",
+	"price": 999,
+	"currency": "USD",
+	"stock": 45,
+	"categoryId": "cat-smartphones",
+	"tagIds": ["tag-5g", "tag-premium", "tag-innovation"],
+	"images": [
+		"/products/pixel-9-pro-front.jpg",
+		"/products/pixel-9-pro-back.jpg"
+	],
+	"specifications": {
+		"display": "6.7\" LTPO OLED",
+		"processor": "Google Tensor G4",
+		"ram": "12GB",
+		"storage": "128GB",
+		"battery": "5000mAh",
+		"camera": "50MP main + 48MP ultrawide + 48MP telephoto"
+	},
+	"featured": true,
+	"available": true,
+	"publishedAt": "2024-10-15T10:00:00Z"
+}
