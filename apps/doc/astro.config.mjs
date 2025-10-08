@@ -37,6 +37,9 @@ export default defineConfig({
 						"../../packages/core/src/loaders.ts",
 						"../../packages/core/src/utils.ts",
 					],
+					typeDoc: {
+						exclude: ["../../packages/core/examples/**/*"],
+					},
 					tsconfig: "../../packages/core/tsconfig.json",
 				}),
 				starlightLlmsTxt(),
