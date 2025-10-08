@@ -5,9 +5,12 @@ prev: false
 title: "build"
 ---
 
-> **build**\<`TMap`, `TCollection`\>(`config`): `Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/), `ContentStore` \| `Exclude`\<`Exclude`\<`CollectionDeps`\<`TCollection`\>, `ParentSpan`\>, `never`\>\>
+> **build**\<`TMap`, `TCollection`\>(`config`): `Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/) \| `ContentStoreError`, [`ContentStore`](/api/cms/classes/contentstore/) \| \{ \[K in string \| number \| symbol\]: CollectionParts\<TCollection\[K\]\>\["loaderDeps"\] \| CollectionParts\<TCollection\[K\]\>\["transformerDeps"\] \| CollectionParts\<TCollection\[K\]\>\["validatorDeps"\] \}\[keyof `TCollection`\]\>
 
-Defined in: [packages/core/src/cms.ts:301](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L301)
+Defined in: [packages/core/src/cms.ts:487](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L487)
+
+Builds and initializes all collections in the CMS.
+This function loads, transforms, validates, and stores all collection data.
 
 ## Type Parameters
 
@@ -15,13 +18,19 @@ Defined in: [packages/core/src/cms.ts:301](https://github.com/bitswired/foldcms/
 
 `TMap` *extends* `Record`\<`string`, `CollectionAny`\>
 
+Record mapping collection names to their Collection definitions
+
 ### TCollection
 
 `TCollection` *extends* `Record`\<`string`, `CollectionAny`\> = `TMap`
 
+The collection map type
+
 ## Parameters
 
 ### config
+
+Configuration object containing the collections to build
 
 #### collections
 
@@ -29,4 +38,19 @@ Defined in: [packages/core/src/cms.ts:301](https://github.com/bitswired/foldcms/
 
 ## Returns
 
-`Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/), `ContentStore` \| `Exclude`\<`Exclude`\<`CollectionDeps`\<`TCollection`\>, `ParentSpan`\>, `never`\>\>
+`Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/) \| `ContentStoreError`, [`ContentStore`](/api/cms/classes/contentstore/) \| \{ \[K in string \| number \| symbol\]: CollectionParts\<TCollection\[K\]\>\["loaderDeps"\] \| CollectionParts\<TCollection\[K\]\>\["transformerDeps"\] \| CollectionParts\<TCollection\[K\]\>\["validatorDeps"\] \}\[keyof `TCollection`\]\>
+
+Effect that completes when all collections have been built
+
+## Example
+
+```typescript
+const buildEffect = build({
+  collections: {
+    posts: postsCollection,
+    users: usersCollection
+  }
+});
+
+yield* buildEffect;
+```

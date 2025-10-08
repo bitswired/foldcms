@@ -5,7 +5,18 @@ prev: false
 title: "LoadingError"
 ---
 
-Defined in: [packages/core/src/cms.ts:19](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L19)
+Defined in: [packages/core/src/cms.ts:30](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L30)
+
+Error thrown when data loading fails during collection processing.
+
+## Example
+
+```typescript
+throw new LoadingError({
+  message: "Failed to load file",
+  cause: fileError
+})
+```
 
 ## Extends
 

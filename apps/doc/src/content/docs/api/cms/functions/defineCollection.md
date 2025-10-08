@@ -9,7 +9,10 @@ title: "defineCollection"
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `never`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:87](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L87)
+Defined in: [packages/core/src/cms.ts:193](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L193)
+
+Factory function to define collections with type-safe configurations.
+Provides overloads for different collection configurations.
 
 ### Type Parameters
 
@@ -32,6 +35,8 @@ Defined in: [packages/core/src/cms.ts:87](https://github.com/bitswired/foldcms/b
 ### Parameters
 
 #### config
+
+Configuration object for the collection
 
 ##### loader
 
@@ -61,11 +66,38 @@ Defined in: [packages/core/src/cms.ts:87](https://github.com/bitswired/foldcms/b
 
 [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `never`, `TValidatorDeps`\>
 
+A fully configured Collection instance
+
+### Example
+
+```typescript
+// Simple collection without transformation
+const users = defineCollection({
+  loadingSchema: UserSchema,
+  loader: loadUsersFromFiles
+});
+
+// Collection with transformation
+const posts = defineCollection({
+  loadingSchema: RawPostSchema,
+  transformedSchema: PostSchema,
+  loader: loadRawPosts,
+  transformer: transformPost,
+  validator: validatePost,
+  relations: {
+    authorId: { type: "single", field: "authorId", target: "users" }
+  }
+});
+```
+
 ## Call Signature
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:117](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L117)
+Defined in: [packages/core/src/cms.ts:223](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L223)
+
+Factory function to define collections with type-safe configurations.
+Provides overloads for different collection configurations.
 
 ### Type Parameters
 
@@ -92,6 +124,8 @@ Defined in: [packages/core/src/cms.ts:117](https://github.com/bitswired/foldcms/
 ### Parameters
 
 #### config
+
+Configuration object for the collection
 
 ##### loader
 
@@ -121,11 +155,38 @@ Defined in: [packages/core/src/cms.ts:117](https://github.com/bitswired/foldcms/
 
 [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
+A fully configured Collection instance
+
+### Example
+
+```typescript
+// Simple collection without transformation
+const users = defineCollection({
+  loadingSchema: UserSchema,
+  loader: loadUsersFromFiles
+});
+
+// Collection with transformation
+const posts = defineCollection({
+  loadingSchema: RawPostSchema,
+  transformedSchema: PostSchema,
+  loader: loadRawPosts,
+  transformer: transformPost,
+  validator: validatePost,
+  relations: {
+    authorId: { type: "single", field: "authorId", target: "users" }
+  }
+});
+```
+
 ## Call Signature
 
 > **defineCollection**\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:154](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L154)
+Defined in: [packages/core/src/cms.ts:260](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L260)
+
+Factory function to define collections with type-safe configurations.
+Provides overloads for different collection configurations.
 
 ### Type Parameters
 
@@ -157,6 +218,8 @@ Defined in: [packages/core/src/cms.ts:154](https://github.com/bitswired/foldcms/
 
 #### config
 
+Configuration object for the collection
+
 ##### loader
 
 `Stream`\<`Type`\<`TLoadSchema`\>, [`LoadingError`](/api/cms/classes/loadingerror/), `TLoaderDeps`\>
@@ -184,3 +247,27 @@ Defined in: [packages/core/src/cms.ts:154](https://github.com/bitswired/foldcms/
 ### Returns
 
 [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
+
+A fully configured Collection instance
+
+### Example
+
+```typescript
+// Simple collection without transformation
+const users = defineCollection({
+  loadingSchema: UserSchema,
+  loader: loadUsersFromFiles
+});
+
+// Collection with transformation
+const posts = defineCollection({
+  loadingSchema: RawPostSchema,
+  transformedSchema: PostSchema,
+  loader: loadRawPosts,
+  transformer: transformPost,
+  validator: validatePost,
+  relations: {
+    authorId: { type: "single", field: "authorId", target: "users" }
+  }
+});
+```

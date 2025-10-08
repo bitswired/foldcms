@@ -5,7 +5,18 @@ prev: false
 title: "TransformationError"
 ---
 
-Defined in: [packages/core/src/cms.ts:24](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L24)
+Defined in: [packages/core/src/cms.ts:46](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L46)
+
+Error thrown when data transformation fails during collection processing.
+
+## Example
+
+```typescript
+throw new TransformationError({
+  message: "Failed to transform data format",
+  cause: originalError
+})
+```
 
 ## Extends
 

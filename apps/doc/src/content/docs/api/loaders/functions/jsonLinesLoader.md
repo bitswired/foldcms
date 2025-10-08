@@ -5,9 +5,12 @@ prev: false
 title: "jsonLinesLoader"
 ---
 
-> **jsonLinesLoader**\<`T`\>(`schema`, `config`): `Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
+> **jsonLinesLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:56](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/loaders.ts#L56)
+Defined in: [packages/core/src/loaders.ts:102](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/loaders.ts#L102)
+
+Loads and parses JSONL (JSON Lines) files from a directory, validating each line against a schema.
+Each line in the file is treated as a separate JSON object.
 
 ## Type Parameters
 
@@ -15,22 +18,43 @@ Defined in: [packages/core/src/loaders.ts:56](https://github.com/bitswired/foldc
 
 `T` *extends* `AnyStruct`
 
+The schema type extending AnyStruct
+
 ## Parameters
 
 ### schema
 
 `T`
 
+Effect Schema used to validate and decode each JSON line
+
 ### config
 
-#### baseDir
-
-`string`
+Configuration object
 
 #### folder
 
 `string`
 
+Path to the directory containing JSONL files
+
 ## Returns
 
-`Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
+`LoaderReturn`\<`T`\>
+
+A Stream of validated objects matching the schema type, one per line
+
+## Throws
+
+When no JSONL files are found, parsing fails, or validation fails
+
+## Example
+
+```typescript
+const LogSchema = Schema.Struct({
+  timestamp: Schema.String,
+  message: Schema.String,
+});
+
+const logs = jsonLinesLoader(LogSchema, { folder: './logs' });
+```

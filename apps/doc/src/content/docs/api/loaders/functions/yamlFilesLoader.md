@@ -5,9 +5,12 @@ prev: false
 title: "yamlFilesLoader"
 ---
 
-> **yamlFilesLoader**\<`T`\>(`schema`, `config`): `Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
+> **yamlFilesLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:73](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/loaders.ts#L73)
+Defined in: [packages/core/src/loaders.ts:140](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/loaders.ts#L140)
+
+Loads and parses YAML files from a directory, validating each file against a schema.
+Supports both .yaml and .yml file extensions. Each file is parsed as a single YAML document.
 
 ## Type Parameters
 
@@ -15,22 +18,43 @@ Defined in: [packages/core/src/loaders.ts:73](https://github.com/bitswired/foldc
 
 `T` *extends* `AnyStruct`
 
+The schema type extending AnyStruct
+
 ## Parameters
 
 ### schema
 
 `T`
 
+Effect Schema used to validate and decode the YAML content
+
 ### config
 
-#### baseDir
-
-`string`
+Configuration object
 
 #### folder
 
 `string`
 
+Path to the directory containing YAML files
+
 ## Returns
 
-`Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
+`LoaderReturn`\<`T`\>
+
+A Stream of validated objects matching the schema type
+
+## Throws
+
+When no YAML files are found, parsing fails, or validation fails
+
+## Example
+
+```typescript
+const ConfigSchema = Schema.Struct({
+  name: Schema.String,
+  settings: Schema.Record(Schema.String, Schema.Unknown),
+});
+
+const configs = yamlFilesLoader(ConfigSchema, { folder: './configs' });
+```

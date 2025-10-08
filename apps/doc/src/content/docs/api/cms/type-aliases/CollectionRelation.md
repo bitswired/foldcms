@@ -7,7 +7,22 @@ title: "CollectionRelation"
 
 > **CollectionRelation**\<`TField`, `TTarget`\> = `object`
 
-Defined in: [packages/core/src/cms.ts:41](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L41)
+Defined in: [packages/core/src/cms.ts:87](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L87)
+
+Defines the type of relationship between collections.
+- `single`: One-to-one relationship returning an Option of the target
+- `array`: One-to-many relationship returning an array of targets
+- `map`: Key-value mapping relationship returning a Map
+
+## Example
+
+```typescript
+const authorRelation: CollectionRelation<"authorId", "authors"> = {
+  type: "single",
+  field: "authorId",
+  target: "authors"
+};
+```
 
 ## Type Parameters
 
@@ -25,7 +40,7 @@ Defined in: [packages/core/src/cms.ts:41](https://github.com/bitswired/foldcms/b
 
 > `readonly` **field**: `TField`
 
-Defined in: [packages/core/src/cms.ts:46](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L46)
+Defined in: [packages/core/src/cms.ts:92](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L92)
 
 ***
 
@@ -33,7 +48,7 @@ Defined in: [packages/core/src/cms.ts:46](https://github.com/bitswired/foldcms/b
 
 > `readonly` **target**: `TTarget`
 
-Defined in: [packages/core/src/cms.ts:47](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L47)
+Defined in: [packages/core/src/cms.ts:93](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L93)
 
 ***
 
@@ -41,4 +56,4 @@ Defined in: [packages/core/src/cms.ts:47](https://github.com/bitswired/foldcms/b
 
 > `readonly` **type**: `"single"` \| `"array"` \| `"map"`
 
-Defined in: [packages/core/src/cms.ts:45](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L45)
+Defined in: [packages/core/src/cms.ts:91](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L91)

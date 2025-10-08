@@ -5,7 +5,19 @@ prev: false
 title: "ValidationError"
 ---
 
-Defined in: [packages/core/src/cms.ts:31](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L31)
+Defined in: [packages/core/src/cms.ts:65](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L65)
+
+Error thrown when data validation fails during collection processing.
+Contains detailed information about validation issues.
+
+## Example
+
+```typescript
+throw new ValidationError({
+  message: "Data validation failed",
+  issues: ["Field 'name' is required", "Field 'age' must be positive"]
+})
+```
 
 ## Extends
 
@@ -119,7 +131,7 @@ The cause of the error.
 
 > `readonly` **issues**: readonly `string`[]
 
-Defined in: [packages/core/src/cms.ts:33](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/cms.ts#L33)
+Defined in: [packages/core/src/cms.ts:67](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/cms.ts#L67)
 
 #### Inherited from
 

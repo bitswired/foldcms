@@ -5,9 +5,11 @@ prev: false
 title: "jsonFilesLoader"
 ---
 
-> **jsonFilesLoader**\<`T`\>(`schema`, `config`): `Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
+> **jsonFilesLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:42](https://github.com/bitswired/foldcms/blob/f5268f9ab9ef080063daf132e858e3c5524b2050/packages/core/src/loaders.ts#L42)
+Defined in: [packages/core/src/loaders.ts:67](https://github.com/bitswired/foldcms/blob/95183c86c9f5ae59bfbaa7d6e4a44975123622e3/packages/core/src/loaders.ts#L67)
+
+Loads and parses JSON files from a directory, validating each file against a schema.
 
 ## Type Parameters
 
@@ -15,22 +17,43 @@ Defined in: [packages/core/src/loaders.ts:42](https://github.com/bitswired/foldc
 
 `T` *extends* `AnyStruct`
 
+The schema type extending AnyStruct
+
 ## Parameters
 
 ### schema
 
 `T`
 
+Effect Schema used to validate and decode the JSON content
+
 ### config
 
-#### baseDir
-
-`string`
+Configuration object
 
 #### folder
 
 `string`
 
+Path to the directory containing JSON files
+
 ## Returns
 
-`Stream`\<`T`\[`"Type"`\], [`LoadingError`](/api/cms/classes/loadingerror/), `never`\>
+`LoaderReturn`\<`T`\>
+
+A Stream of validated objects matching the schema type
+
+## Throws
+
+When no JSON files are found, parsing fails, or validation fails
+
+## Example
+
+```typescript
+const UserSchema = Schema.Struct({
+  id: Schema.String,
+  name: Schema.String,
+});
+
+const users = jsonFilesLoader(UserSchema, { folder: './data/users' });
+```

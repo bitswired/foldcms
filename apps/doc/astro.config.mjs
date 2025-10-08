@@ -13,12 +13,12 @@ export default defineConfig({
 	},
 	integrations: [
 		starlight({
-			title: "My Docs",
+			title: "FoldCMS",
 			social: [
 				{
 					icon: "github",
 					label: "GitHub",
-					href: "https://github.com/withastro/starlight",
+					href: "https://github.com/bitswired/foldcms",
 				},
 			],
 			plugins: [
@@ -27,6 +27,7 @@ export default defineConfig({
 					entryPoints: [
 						"../../packages/core/src/cms.ts",
 						"../../packages/core/src/loaders.ts",
+						"../../packages/core/src/utils.ts",
 					],
 					tsconfig: "../../packages/core/tsconfig.json",
 				}),

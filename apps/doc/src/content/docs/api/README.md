@@ -9,3 +9,4 @@ title: "@foldcms/core"
 
 - [cms](/api/cms/readme/)
 - [loaders](/api/loaders/readme/)
+- [utils](/api/utils/readme/)
