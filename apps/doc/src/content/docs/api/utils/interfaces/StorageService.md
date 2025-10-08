@@ -5,7 +5,7 @@ prev: false
 title: "StorageService"
 ---
 
-Defined in: [packages/core/src/utils.ts:25](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/utils.ts#L25)
+Defined in: [packages/core/src/utils.ts:25](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/utils.ts#L25)
 
 Generic storage service interface that provides cloud storage operations.
 This interface abstracts storage operations to allow for different implementations
@@ -17,7 +17,7 @@ This interface abstracts storage operations to allow for different implementatio
 
 > `readonly` **computeFileHash**: (`filePath`) => `Effect`\<`string`, `Error`, `FileSystem`\>
 
-Defined in: [packages/core/src/utils.ts:73](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/utils.ts#L73)
+Defined in: [packages/core/src/utils.ts:73](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/utils.ts#L73)
 
 Computes the MD5 hash of a local file.
 This is useful for comparing local and remote file versions.
@@ -42,7 +42,7 @@ An Effect that succeeds with the MD5 hash string or fails with an Error, requiri
 
 > `readonly` **delete**: (`bucket`, `key`) => `Effect`\<`void`, `Error`\>
 
-Defined in: [packages/core/src/utils.ts:57](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/utils.ts#L57)
+Defined in: [packages/core/src/utils.ts:57](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/utils.ts#L57)
 
 Deletes a file from the specified bucket.
 
@@ -72,7 +72,7 @@ An Effect that succeeds with void or fails with an Error
 
 > `readonly` **getETag**: (`bucket`, `key`) => `Effect`\<`null` \| `string`, `Error`\>
 
-Defined in: [packages/core/src/utils.ts:46](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/utils.ts#L46)
+Defined in: [packages/core/src/utils.ts:46](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/utils.ts#L46)
 
 Retrieves the ETag (entity tag) for a file in the specified bucket.
 ETags are typically used for cache validation and change detection.
@@ -103,7 +103,7 @@ An Effect that succeeds with the ETag string or null if not found, or fails with
 
 > `readonly` **listAll**: (`bucket`) => `Effect`\<`string`[], `Error`\>
 
-Defined in: [packages/core/src/utils.ts:65](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/utils.ts#L65)
+Defined in: [packages/core/src/utils.ts:65](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/utils.ts#L65)
 
 Lists all object keys in the specified bucket.
 This operation handles pagination automatically to retrieve all objects.
@@ -128,7 +128,7 @@ An Effect that succeeds with an array of all object keys or fails with an Error
 
 > `readonly` **upload**: (`bucket`, `key`, `body`) => `Effect`\<`void`, `Error`\>
 
-Defined in: [packages/core/src/utils.ts:33](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/utils.ts#L33)
+Defined in: [packages/core/src/utils.ts:33](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/utils.ts#L33)
 
 Uploads a file to the specified bucket with the given key.
 

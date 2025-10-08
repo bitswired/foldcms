@@ -7,7 +7,7 @@ title: "makeCms"
 
 > **makeCms**\<`TMap`, `TCollection`\>(`config`): `object`
 
-Defined in: [packages/core/src/cms.ts:585](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L585)
+Defined in: [packages/core/src/cms.ts:585](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/cms.ts#L585)
 
 Creates a CMS instance with its associated Context.Tag and Layer.
 This is the main factory function for creating a complete CMS setup.

@@ -7,7 +7,7 @@ title: "factory"
 
 > **factory**\<`TMap`, `TCollection`\>(): `Tag`\<[`Cms`](/api/cms/interfaces/cms/)\<`TMap`, `TCollection`, `CmsError` \| `ContentStoreError`\>, [`Cms`](/api/cms/interfaces/cms/)\<`TMap`, `TCollection`, `CmsError` \| `ContentStoreError`\>\>
 
-Defined in: [packages/core/src/cms.ts:554](https://github.com/bitswired/foldcms/blob/e40d0cf35579f8d8914becd5acbabb5d0cdf8620/packages/core/src/cms.ts#L554)
+Defined in: [packages/core/src/cms.ts:554](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/cms.ts#L554)
 
 Factory function that creates a Context.Tag for a CMS instance.
 This tag is used to identify and inject CMS instances in the Effect context.
