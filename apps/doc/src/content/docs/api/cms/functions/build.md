@@ -7,7 +7,7 @@ title: "build"
 
 > **build**\<`TMap`, `TCollection`\>(`config`): `Effect`\<`void`, [`LoadingError`](/api/cms/classes/loadingerror/) \| [`TransformationError`](/api/cms/classes/transformationerror/) \| [`ValidationError`](/api/cms/classes/validationerror/) \| `ContentStoreError`, [`ContentStore`](/api/cms/classes/contentstore/) \| \{ \[K in string \| number \| symbol\]: CollectionParts\<TCollection\[K\]\>\["loaderDeps"\] \| CollectionParts\<TCollection\[K\]\>\["transformerDeps"\] \| CollectionParts\<TCollection\[K\]\>\["validatorDeps"\] \}\[keyof `TCollection`\]\>
 
-Defined in: [packages/core/src/cms.ts:487](https://github.com/bitswired/foldcms/blob/19c9e600da6c0170e8229bb7e1889de08e1cce6f/packages/core/src/cms.ts#L487)
+Defined in: [packages/core/src/cms.ts:487](https://github.com/bitswired/foldcms/blob/a5796744336f5646b8ccb4abf3c6d1334a83f443/packages/core/src/cms.ts#L487)
 
 Builds and initializes all collections in the CMS.
 This function loads, transforms, validates, and stores all collection data.

@@ -46,14 +46,19 @@ export default defineConfig({
 					label: "Guides",
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: "Getting Started", slug: "guides/getting-started" },
+						{
+							label: "Getting Started",
+							// slug: "guides/getting-started",
+							items: [
+								{
+									label: "What is FoldCMS?",
+									slug: "guides/getting-started",
+								},
+							],
+						},
 					],
 				},
 				typeDocSidebarGroup,
-				{
-					label: "Reference",
-					autogenerate: { directory: "reference" },
-				},
 			],
 		}),
 	],
