@@ -1,5 +1,11 @@
 # @foldcms/core
 
+## 0.3.4
+
+### Patch Changes
+
+- 47f2c02: Fix biome error with Tailwind
+
 ## 0.3.3
 
 ### Patch Changes
