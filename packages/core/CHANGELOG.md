@@ -1,5 +1,11 @@
 # @foldcms/core
 
+## 0.3.5
+
+### Patch Changes
+
+- 632c861: Fix error because of platform bun in test that needs effect cluster
+
 ## 0.3.4
 
 ### Patch Changes
