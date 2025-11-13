@@ -1,5 +1,11 @@
 # @foldcms/core
 
+## 0.3.6
+
+### Patch Changes
+
+- 6d8c67b: Fix biome version
+
 ## 0.3.5
 
 ### Patch Changes
