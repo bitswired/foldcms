@@ -5,7 +5,7 @@ prev: false
 title: "LoadingError"
 ---
 
-Defined in: [packages/core/src/cms.ts:30](https://github.com/bitswired/foldcms/blob/a5796744336f5646b8ccb4abf3c6d1334a83f443/packages/core/src/cms.ts#L30)
+Defined in: [packages/core/src/cms.ts:30](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L30)
 
 Error thrown when data loading fails during collection processing.
 

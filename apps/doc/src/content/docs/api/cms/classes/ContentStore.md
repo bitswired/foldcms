@@ -5,7 +5,7 @@ prev: false
 title: "ContentStore"
 ---
 
-Defined in: [packages/core/src/cms.ts:805](https://github.com/bitswired/foldcms/blob/a5796744336f5646b8ccb4abf3c6d1334a83f443/packages/core/src/cms.ts#L805)
+Defined in: [packages/core/src/cms.ts:805](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L805)
 
 Content storage abstraction providing CRUD operations for collections.
 Handles serialization, hashing, and database operations for content data.

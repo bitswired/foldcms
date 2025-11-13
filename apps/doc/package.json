@@ -29,6 +29,7 @@
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
 		"sharp": "^0.34.2",
+		"starlight-blog": "^0.24.2",
 		"starlight-llms-txt": "^0.6.0",
 		"starlight-typedoc": "^0.21.3",
 		"tailwind-merge": "^3.3.1",

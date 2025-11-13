@@ -4,6 +4,7 @@ import react from "@astrojs/react";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
+import starlightBlog from "starlight-blog";
 import starlightLlmsTxt from "starlight-llms-txt";
 import starlightTypeDoc, { typeDocSidebarGroup } from "starlight-typedoc";
 
@@ -40,6 +41,9 @@ export default defineConfig({
 					tsconfig: "../../packages/core/tsconfig.json",
 				}),
 				starlightLlmsTxt(),
+				starlightBlog({
+					title: "FoldCMS Blog",
+				}),
 			],
 			sidebar: [
 				{

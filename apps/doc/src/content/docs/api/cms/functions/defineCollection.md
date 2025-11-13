@@ -9,7 +9,7 @@ title: "defineCollection"
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `never`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:193](https://github.com/bitswired/foldcms/blob/a5796744336f5646b8ccb4abf3c6d1334a83f443/packages/core/src/cms.ts#L193)
+Defined in: [packages/core/src/cms.ts:193](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L193)
 
 Factory function to define collections with type-safe configurations.
 Provides overloads for different collection configurations.
@@ -94,7 +94,7 @@ const posts = defineCollection({
 
 > **defineCollection**\<`TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TLoadSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:223](https://github.com/bitswired/foldcms/blob/a5796744336f5646b8ccb4abf3c6d1334a83f443/packages/core/src/cms.ts#L223)
+Defined in: [packages/core/src/cms.ts:223](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L223)
 
 Factory function to define collections with type-safe configurations.
 Provides overloads for different collection configurations.
@@ -183,7 +183,7 @@ const posts = defineCollection({
 
 > **defineCollection**\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>(`config`): [`Collection`](/api/cms/interfaces/collection/)\<`TLoadSchema`, `TTransformSchema`, `TRelations`, `TLoaderDeps`, `TTransformerDeps`, `TValidatorDeps`\>
 
-Defined in: [packages/core/src/cms.ts:260](https://github.com/bitswired/foldcms/blob/a5796744336f5646b8ccb4abf3c6d1334a83f443/packages/core/src/cms.ts#L260)
+Defined in: [packages/core/src/cms.ts:260](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L260)
 
 Factory function to define collections with type-safe configurations.
 Provides overloads for different collection configurations.

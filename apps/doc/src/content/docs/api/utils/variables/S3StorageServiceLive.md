@@ -7,7 +7,7 @@ title: "S3StorageServiceLive"
 
 > `const` **S3StorageServiceLive**: `Layer`\<[`StorageService`](/api/utils/interfaces/storageservice/), `ConfigError`, `never`\>
 
-Defined in: [packages/core/src/utils.ts:234](https://github.com/bitswired/foldcms/blob/a5796744336f5646b8ccb4abf3c6d1334a83f443/packages/core/src/utils.ts#L234)
+Defined in: [packages/core/src/utils.ts:234](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/utils.ts#L234)
 
 Effect layer that provides a live implementation of StorageService using S3.
 This layer can be used to inject the S3 storage service into your Effect application.
