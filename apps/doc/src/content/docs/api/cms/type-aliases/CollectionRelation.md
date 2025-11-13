@@ -7,7 +7,7 @@ title: "CollectionRelation"
 
 > **CollectionRelation**\<`TField`, `TTarget`\> = `object`
 
-Defined in: [packages/core/src/cms.ts:87](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L87)
+Defined in: [packages/core/src/cms.ts:87](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L87)
 
 Defines the type of relationship between collections.
 - `single`: One-to-one relationship returning an Option of the target
@@ -40,7 +40,7 @@ const authorRelation: CollectionRelation<"authorId", "authors"> = {
 
 > `readonly` **field**: `TField`
 
-Defined in: [packages/core/src/cms.ts:92](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L92)
+Defined in: [packages/core/src/cms.ts:92](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L92)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [packages/core/src/cms.ts:92](https://github.com/bitswired/foldcms/b
 
 > `readonly` **target**: `TTarget`
 
-Defined in: [packages/core/src/cms.ts:93](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L93)
+Defined in: [packages/core/src/cms.ts:93](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L93)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: [packages/core/src/cms.ts:93](https://github.com/bitswired/foldcms/b
 
 > `readonly` **type**: `"single"` \| `"array"` \| `"map"`
 
-Defined in: [packages/core/src/cms.ts:91](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L91)
+Defined in: [packages/core/src/cms.ts:91](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L91)

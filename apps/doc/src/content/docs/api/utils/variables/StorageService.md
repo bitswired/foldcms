@@ -7,7 +7,7 @@ title: "StorageService"
 
 > **StorageService**: `Tag`\<[`StorageService`](/api/utils/interfaces/storageservice/), [`StorageService`](/api/utils/interfaces/storageservice/)\>
 
-Defined in: [packages/core/src/utils.ts:25](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/utils.ts#L25)
+Defined in: [packages/core/src/utils.ts:25](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/utils.ts#L25)
 
 Service tag for dependency injection of StorageService.
 Used with Effect's Context system to provide StorageService instances.

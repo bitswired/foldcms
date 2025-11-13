@@ -5,7 +5,7 @@ prev: false
 title: "ValidationError"
 ---
 
-Defined in: [packages/core/src/cms.ts:65](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L65)
+Defined in: [packages/core/src/cms.ts:65](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L65)
 
 Error thrown when data validation fails during collection processing.
 Contains detailed information about validation issues.
@@ -29,7 +29,7 @@ throw new ValidationError({
 
 > **new ValidationError**(`args`): `ValidationError`
 
-Defined in: node\_modules/effect/dist/dts/Data.d.ts:610
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Data.d.ts:610
 
 #### Parameters
 
@@ -57,7 +57,7 @@ readonly `string`[]
 
 > `readonly` **\_tag**: `"ValidationError"`
 
-Defined in: node\_modules/effect/dist/dts/Data.d.ts:611
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Data.d.ts:611
 
 #### Inherited from
 
@@ -69,7 +69,7 @@ Defined in: node\_modules/effect/dist/dts/Data.d.ts:611
 
 > `readonly` **\[ChannelTypeId\]**: `VarianceStruct`\<`never`, `unknown`, `ValidationError`, `unknown`, `never`, `unknown`, `never`\>
 
-Defined in: node\_modules/effect/dist/dts/Cause.d.ts:285
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Cause.d.ts:285
 
 #### Inherited from
 
@@ -81,7 +81,7 @@ Defined in: node\_modules/effect/dist/dts/Cause.d.ts:285
 
 > `readonly` **\[EffectTypeId\]**: `VarianceStruct`\<`never`, `ValidationError`, `never`\>
 
-Defined in: node\_modules/effect/dist/dts/Cause.d.ts:282
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Cause.d.ts:282
 
 #### Inherited from
 
@@ -93,7 +93,7 @@ Defined in: node\_modules/effect/dist/dts/Cause.d.ts:282
 
 > `readonly` **\[SinkTypeId\]**: `VarianceStruct`\<`never`, `unknown`, `never`, `ValidationError`, `never`\>
 
-Defined in: node\_modules/effect/dist/dts/Cause.d.ts:284
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Cause.d.ts:284
 
 #### Inherited from
 
@@ -105,7 +105,7 @@ Defined in: node\_modules/effect/dist/dts/Cause.d.ts:284
 
 > `readonly` **\[StreamTypeId\]**: `VarianceStruct`\<`never`, `ValidationError`, `never`\>
 
-Defined in: node\_modules/effect/dist/dts/Cause.d.ts:283
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Cause.d.ts:283
 
 #### Inherited from
 
@@ -117,7 +117,7 @@ Defined in: node\_modules/effect/dist/dts/Cause.d.ts:283
 
 > `optional` **cause**: `unknown`
 
-Defined in: node\_modules/typescript/lib/lib.es2022.error.d.ts:26
+Defined in: node\_modules/.bun/typescript@5.9.2/node\_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 The cause of the error.
 
@@ -131,7 +131,7 @@ The cause of the error.
 
 > `readonly` **issues**: readonly `string`[]
 
-Defined in: [packages/core/src/cms.ts:67](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L67)
+Defined in: [packages/core/src/cms.ts:67](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L67)
 
 #### Inherited from
 
@@ -143,7 +143,7 @@ Defined in: [packages/core/src/cms.ts:67](https://github.com/bitswired/foldcms/b
 
 > **message**: `string`
 
-Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
+Defined in: node\_modules/.bun/typescript@5.9.2/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Inherited from
 
@@ -155,7 +155,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 > **name**: `string`
 
-Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
+Defined in: node\_modules/.bun/typescript@5.9.2/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Inherited from
 
@@ -167,7 +167,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 > `optional` **stack**: `string`
 
-Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
+Defined in: node\_modules/.bun/typescript@5.9.2/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Inherited from
 
@@ -179,7 +179,7 @@ Defined in: node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 > **\[iterator\]**(): `EffectGenerator`\<`Effect`\<`never`, `ValidationError`, `never`\>\>
 
-Defined in: node\_modules/effect/dist/dts/Cause.d.ts:286
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Cause.d.ts:286
 
 #### Returns
 
@@ -195,7 +195,7 @@ Defined in: node\_modules/effect/dist/dts/Cause.d.ts:286
 
 > **\[NodeInspectSymbol\]**(): `unknown`
 
-Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:22
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Inspectable.d.ts:22
 
 #### Returns
 
@@ -213,7 +213,7 @@ Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:22
 
 > **pipe**\<`A`\>(`this`): `A`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:10
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:10
 
 ##### Type Parameters
 
@@ -239,7 +239,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:10
 
 > **pipe**\<`A`, `B`\>(`this`, `ab`): `B`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:11
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:11
 
 ##### Type Parameters
 
@@ -273,7 +273,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:11
 
 > **pipe**\<`A`, `B`, `C`\>(`this`, `ab`, `bc`): `C`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:12
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:12
 
 ##### Type Parameters
 
@@ -315,7 +315,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:12
 
 > **pipe**\<`A`, `B`, `C`, `D`\>(`this`, `ab`, `bc`, `cd`): `D`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:13
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:13
 
 ##### Type Parameters
 
@@ -365,7 +365,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:13
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`\>(`this`, `ab`, `bc`, `cd`, `de`): `E`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:14
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:14
 
 ##### Type Parameters
 
@@ -423,7 +423,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:14
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`): `F`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:15
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:15
 
 ##### Type Parameters
 
@@ -489,7 +489,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:15
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`): `G`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:16
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:16
 
 ##### Type Parameters
 
@@ -563,7 +563,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:16
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`): `H`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:17
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:17
 
 ##### Type Parameters
 
@@ -645,7 +645,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:17
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`): `I`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:18
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:18
 
 ##### Type Parameters
 
@@ -735,7 +735,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:18
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`): `J`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:19
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:19
 
 ##### Type Parameters
 
@@ -833,7 +833,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:19
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`): `K`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:20
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:20
 
 ##### Type Parameters
 
@@ -939,7 +939,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:20
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`): `L`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:21
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:21
 
 ##### Type Parameters
 
@@ -1053,7 +1053,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:21
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`): `M`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:22
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:22
 
 ##### Type Parameters
 
@@ -1175,7 +1175,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:22
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`): `N`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:23
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:23
 
 ##### Type Parameters
 
@@ -1305,7 +1305,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:23
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`): `O`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:24
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:24
 
 ##### Type Parameters
 
@@ -1443,7 +1443,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:24
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`): `P`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:25
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:25
 
 ##### Type Parameters
 
@@ -1589,7 +1589,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:25
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`): `Q`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:26
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:26
 
 ##### Type Parameters
 
@@ -1743,7 +1743,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:26
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`): `R`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:27
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:27
 
 ##### Type Parameters
 
@@ -1905,7 +1905,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:27
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`): `S`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:28
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:28
 
 ##### Type Parameters
 
@@ -2075,7 +2075,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:28
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`, `T`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`, `st`): `T`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:29
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:29
 
 ##### Type Parameters
 
@@ -2253,7 +2253,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:29
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`, `T`, `U`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`, `st`, `tu`): `U`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:30
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:30
 
 ##### Type Parameters
 
@@ -2439,7 +2439,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:30
 
 > **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`, `T`, `U`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`, `st`, `tu`): `U`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:31
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:31
 
 ##### Type Parameters
 
@@ -2627,7 +2627,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:31
 
 > **toJSON**(): `unknown`
 
-Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:21
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Inspectable.d.ts:21
 
 #### Returns
 
@@ -2643,7 +2643,7 @@ Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:21
 
 > **toString**(): `string`
 
-Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:20
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Inspectable.d.ts:20
 
 #### Returns
 

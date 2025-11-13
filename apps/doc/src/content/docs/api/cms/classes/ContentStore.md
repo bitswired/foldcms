@@ -5,7 +5,7 @@ prev: false
 title: "ContentStore"
 ---
 
-Defined in: [packages/core/src/cms.ts:805](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L805)
+Defined in: [packages/core/src/cms.ts:805](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L805)
 
 Content storage abstraction providing CRUD operations for collections.
 Handles serialization, hashing, and database operations for content data.
@@ -35,7 +35,7 @@ const allPosts = yield* contentStore.getAll("posts", PostSchema);
 
 > **new ContentStore**(`_`): `ContentStore`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:109
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:109
 
 #### Parameters
 
@@ -57,7 +57,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:109
 
 > `readonly` **\[TagTypeId\]**: *typeof* `TagTypeId`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:100
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:100
 
 #### Inherited from
 
@@ -69,7 +69,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:100
 
 > **Id**: `"ContentStore"`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:99
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:99
 
 #### Inherited from
 
@@ -81,7 +81,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:99
 
 > `readonly` **Type**: `object`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:101
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:101
 
 #### getAll()
 
@@ -197,7 +197,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:101
 
 > `readonly` `static` **\_op**: `"Tag"`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:33
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:33
 
 #### Inherited from
 
@@ -209,7 +209,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:33
 
 > `readonly` `static` **\[ChannelTypeId\]**: `VarianceStruct`\<`never`, `unknown`, `never`, `unknown`, \{ `getAll`: \<`T`\>(`collection`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; `getById`: \<`T`\>(`collection`, `id`, `schema`) => `Effect`\<`Option`\<`T`\[`"Type"`\]\>, `ContentStoreError`\>; `insert`: \<`T`\>(`id`, `collection`, `data`) => `Effect`\<`void`, `ContentStoreError`, `never`\>; `query`: \<`T`\>(`sql`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; \}, `unknown`, `ContentStore`\>
 
-Defined in: node\_modules/effect/dist/dts/Channel.d.ts:108
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Channel.d.ts:108
 
 #### Inherited from
 
@@ -221,7 +221,7 @@ Defined in: node\_modules/effect/dist/dts/Channel.d.ts:108
 
 > `readonly` `static` **\[EffectTypeId\]**: `VarianceStruct`\<\{ `getAll`: \<`T`\>(`collection`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; `getById`: \<`T`\>(`collection`, `id`, `schema`) => `Effect`\<`Option`\<`T`\[`"Type"`\]\>, `ContentStoreError`\>; `insert`: \<`T`\>(`id`, `collection`, `data`) => `Effect`\<`void`, `ContentStoreError`, `never`\>; `query`: \<`T`\>(`sql`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; \}, `never`, `ContentStore`\>
 
-Defined in: node\_modules/effect/dist/dts/Effect.d.ts:195
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Effect.d.ts:195
 
 #### Inherited from
 
@@ -233,7 +233,7 @@ Defined in: node\_modules/effect/dist/dts/Effect.d.ts:195
 
 > `static` `optional` **\[ignoreSymbol\]**: `TagUnifyIgnore`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:46
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:46
 
 #### Inherited from
 
@@ -245,7 +245,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:46
 
 > `readonly` `static` **\[SinkTypeId\]**: `VarianceStruct`\<\{ `getAll`: \<`T`\>(`collection`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; `getById`: \<`T`\>(`collection`, `id`, `schema`) => `Effect`\<`Option`\<`T`\[`"Type"`\]\>, `ContentStoreError`\>; `insert`: \<`T`\>(`id`, `collection`, `data`) => `Effect`\<`void`, `ContentStoreError`, `never`\>; `query`: \<`T`\>(`sql`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; \}, `unknown`, `never`, `never`, `ContentStore`\>
 
-Defined in: node\_modules/effect/dist/dts/Sink.d.ts:82
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Sink.d.ts:82
 
 #### Inherited from
 
@@ -257,7 +257,7 @@ Defined in: node\_modules/effect/dist/dts/Sink.d.ts:82
 
 > `readonly` `static` **\[STMTypeId\]**: `object`
 
-Defined in: node\_modules/effect/dist/dts/STM.d.ts:136
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/STM.d.ts:136
 
 #### \_A
 
@@ -281,7 +281,7 @@ Defined in: node\_modules/effect/dist/dts/STM.d.ts:136
 
 > `readonly` `static` **\[StreamTypeId\]**: `VarianceStruct`\<\{ `getAll`: \<`T`\>(`collection`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; `getById`: \<`T`\>(`collection`, `id`, `schema`) => `Effect`\<`Option`\<`T`\[`"Type"`\]\>, `ContentStoreError`\>; `insert`: \<`T`\>(`id`, `collection`, `data`) => `Effect`\<`void`, `ContentStoreError`, `never`\>; `query`: \<`T`\>(`sql`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; \}, `never`, `ContentStore`\>
 
-Defined in: node\_modules/effect/dist/dts/Stream.d.ts:111
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Stream.d.ts:111
 
 #### Inherited from
 
@@ -293,7 +293,7 @@ Defined in: node\_modules/effect/dist/dts/Stream.d.ts:111
 
 > `readonly` `static` **\[TagTypeId\]**: `object`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:36
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:36
 
 #### \_Identifier
 
@@ -313,7 +313,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:36
 
 > `static` `optional` **\[typeSymbol\]**: `unknown`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:44
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:44
 
 #### Inherited from
 
@@ -325,7 +325,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:44
 
 > `static` `optional` **\[unifySymbol\]**: `TagUnify`\<`TagClass`\<`ContentStore`, `"ContentStore"`, \{ `getAll`: \<`T`\>(`collection`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; `getById`: \<`T`\>(`collection`, `id`, `schema`) => `Effect`\<`Option`\<`T`\[`"Type"`\]\>, `ContentStoreError`\>; `insert`: \<`T`\>(`id`, `collection`, `data`) => `Effect`\<`void`, `ContentStoreError`, `never`\>; `query`: \<`T`\>(`sql`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; \}\>\>
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:45
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:45
 
 #### Inherited from
 
@@ -337,7 +337,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:45
 
 > `readonly` `static` **Identifier**: `ContentStore`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:35
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:35
 
 #### Inherited from
 
@@ -349,7 +349,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:35
 
 > `readonly` `static` **key**: `"ContentStore"`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:110
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:110
 
 #### Inherited from
 
@@ -361,7 +361,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:110
 
 > `readonly` `static` **Service**: `object`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:34
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:34
 
 #### getAll()
 
@@ -477,7 +477,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:34
 
 > `readonly` `static` `optional` **stack**: `string`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:42
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:42
 
 #### Inherited from
 
@@ -489,7 +489,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:42
 
 > `static` **\[iterator\]**(): `EffectGenerator`\<`Tag`\<`ContentStore`, \{ `getAll`: \<`T`\>(`collection`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; `getById`: \<`T`\>(`collection`, `id`, `schema`) => `Effect`\<`Option`\<`T`\[`"Type"`\]\>, `ContentStoreError`\>; `insert`: \<`T`\>(`id`, `collection`, `data`) => `Effect`\<`void`, `ContentStoreError`, `never`\>; `query`: \<`T`\>(`sql`, `schema`) => `Effect`\<readonly `T`\[`"Type"`\][], `ContentStoreError`\>; \}\>\>
 
-Defined in: node\_modules/effect/dist/dts/Effect.d.ts:137
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Effect.d.ts:137
 
 #### Returns
 
@@ -505,7 +505,7 @@ Defined in: node\_modules/effect/dist/dts/Effect.d.ts:137
 
 > `static` **\[NodeInspectSymbol\]**(): `unknown`
 
-Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:22
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Inspectable.d.ts:22
 
 #### Returns
 
@@ -521,7 +521,7 @@ Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:22
 
 > `static` **context**(`self`): `Context`\<`ContentStore`\>
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:41
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:41
 
 #### Parameters
 
@@ -557,7 +557,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:41
 
 > `static` **of**(`self`): `object`
 
-Defined in: node\_modules/effect/dist/dts/Context.d.ts:40
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Context.d.ts:40
 
 #### Parameters
 
@@ -699,7 +699,7 @@ Defined in: node\_modules/effect/dist/dts/Context.d.ts:40
 
 > `static` **pipe**\<`A`\>(`this`): `A`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:10
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:10
 
 ##### Type Parameters
 
@@ -725,7 +725,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:10
 
 > `static` **pipe**\<`A`, `B`\>(`this`, `ab`): `B`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:11
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:11
 
 ##### Type Parameters
 
@@ -759,7 +759,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:11
 
 > `static` **pipe**\<`A`, `B`, `C`\>(`this`, `ab`, `bc`): `C`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:12
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:12
 
 ##### Type Parameters
 
@@ -801,7 +801,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:12
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`\>(`this`, `ab`, `bc`, `cd`): `D`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:13
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:13
 
 ##### Type Parameters
 
@@ -851,7 +851,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:13
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`\>(`this`, `ab`, `bc`, `cd`, `de`): `E`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:14
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:14
 
 ##### Type Parameters
 
@@ -909,7 +909,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:14
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`): `F`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:15
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:15
 
 ##### Type Parameters
 
@@ -975,7 +975,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:15
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`): `G`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:16
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:16
 
 ##### Type Parameters
 
@@ -1049,7 +1049,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:16
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`): `H`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:17
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:17
 
 ##### Type Parameters
 
@@ -1131,7 +1131,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:17
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`): `I`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:18
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:18
 
 ##### Type Parameters
 
@@ -1221,7 +1221,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:18
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`): `J`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:19
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:19
 
 ##### Type Parameters
 
@@ -1319,7 +1319,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:19
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`): `K`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:20
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:20
 
 ##### Type Parameters
 
@@ -1425,7 +1425,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:20
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`): `L`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:21
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:21
 
 ##### Type Parameters
 
@@ -1539,7 +1539,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:21
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`): `M`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:22
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:22
 
 ##### Type Parameters
 
@@ -1661,7 +1661,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:22
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`): `N`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:23
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:23
 
 ##### Type Parameters
 
@@ -1791,7 +1791,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:23
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`): `O`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:24
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:24
 
 ##### Type Parameters
 
@@ -1929,7 +1929,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:24
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`): `P`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:25
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:25
 
 ##### Type Parameters
 
@@ -2075,7 +2075,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:25
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`): `Q`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:26
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:26
 
 ##### Type Parameters
 
@@ -2229,7 +2229,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:26
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`): `R`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:27
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:27
 
 ##### Type Parameters
 
@@ -2391,7 +2391,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:27
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`): `S`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:28
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:28
 
 ##### Type Parameters
 
@@ -2561,7 +2561,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:28
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`, `T`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`, `st`): `T`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:29
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:29
 
 ##### Type Parameters
 
@@ -2739,7 +2739,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:29
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`, `T`, `U`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`, `st`, `tu`): `U`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:30
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:30
 
 ##### Type Parameters
 
@@ -2925,7 +2925,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:30
 
 > `static` **pipe**\<`A`, `B`, `C`, `D`, `E`, `F`, `G`, `H`, `I`, `J`, `K`, `L`, `M`, `N`, `O`, `P`, `Q`, `R`, `S`, `T`, `U`\>(`this`, `ab`, `bc`, `cd`, `de`, `ef`, `fg`, `gh`, `hi`, `ij`, `jk`, `kl`, `lm`, `mn`, `no`, `op`, `pq`, `qr`, `rs`, `st`, `tu`): `U`
 
-Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:31
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Pipeable.d.ts:31
 
 ##### Type Parameters
 
@@ -3113,7 +3113,7 @@ Defined in: node\_modules/effect/dist/dts/Pipeable.d.ts:31
 
 > `static` **toJSON**(): `unknown`
 
-Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:21
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Inspectable.d.ts:21
 
 #### Returns
 
@@ -3129,7 +3129,7 @@ Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:21
 
 > `static` **toString**(): `string`
 
-Defined in: node\_modules/effect/dist/dts/Inspectable.d.ts:20
+Defined in: node\_modules/.bun/effect@3.19.3/node\_modules/effect/dist/dts/Inspectable.d.ts:20
 
 #### Returns
 

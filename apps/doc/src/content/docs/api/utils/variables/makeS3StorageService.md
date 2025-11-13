@@ -7,7 +7,7 @@ title: "makeS3StorageService"
 
 > `const` **makeS3StorageService**: `Effect`\<[`StorageService`](/api/utils/interfaces/storageservice/), `ConfigError`, `never`\>
 
-Defined in: [packages/core/src/utils.ts:113](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/utils.ts#L113)
+Defined in: [packages/core/src/utils.ts:113](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/utils.ts#L113)
 
 Creates an S3-compatible storage service instance configured for Cloudflare R2.
 Reads configuration from environment variables and initializes an S3 client.

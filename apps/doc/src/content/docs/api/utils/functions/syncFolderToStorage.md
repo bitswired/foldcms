@@ -7,7 +7,7 @@ title: "syncFolderToStorage"
 
 > **syncFolderToStorage**(`options`): `Effect`\<\[`Duration`, \[`Chunk`\<\{ `bucket`: `string`; `fileName`: `string`; `localETag`: `string`; `remoteETag`: `null` \| `string`; `uploaded`: `boolean`; \}\>, `void` \| `Chunk`\<\{ `bucket`: `string`; `deleted`: `boolean`; `fileName`: `string`; \}\>\]\], `Error` \| `PlatformError`, `FileSystem` \| `Path` \| [`StorageService`](/api/utils/interfaces/storageservice/)\>
 
-Defined in: [packages/core/src/utils.ts:435](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/utils.ts#L435)
+Defined in: [packages/core/src/utils.ts:435](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/utils.ts#L435)
 
 Synchronizes a local folder with cloud storage buckets.
 This function uploads changed files and optionally deletes orphaned files to keep

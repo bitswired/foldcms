@@ -7,7 +7,7 @@ title: "mdxLoader"
 
 > **mdxLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:230](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/loaders.ts#L230)
+Defined in: [packages/core/src/loaders.ts:230](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/loaders.ts#L230)
 
 Loads and processes MDX files from a directory, bundling them and validating against a schema.
 Extracts frontmatter, compiles MDX to executable code, and optionally captures named exports.

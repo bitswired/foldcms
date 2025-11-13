@@ -7,7 +7,7 @@ title: "CollectionMap"
 
 > **CollectionMap**\<`T`\> = `T`
 
-Defined in: [packages/core/src/cms.ts:162](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/cms.ts#L162)
+Defined in: [packages/core/src/cms.ts:162](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/cms.ts#L162)
 
 Type helper for mapping collection names to their collection definitions.
 

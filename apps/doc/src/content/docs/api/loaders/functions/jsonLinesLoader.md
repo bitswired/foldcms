@@ -7,7 +7,7 @@ title: "jsonLinesLoader"
 
 > **jsonLinesLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:102](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/loaders.ts#L102)
+Defined in: [packages/core/src/loaders.ts:102](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/loaders.ts#L102)
 
 Loads and parses JSONL (JSON Lines) files from a directory, validating each line against a schema.
 Each line in the file is treated as a separate JSON object.

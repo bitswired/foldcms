@@ -7,7 +7,7 @@ title: "yamlFilesLoader"
 
 > **yamlFilesLoader**\<`T`\>(`schema`, `config`): `LoaderReturn`\<`T`\>
 
-Defined in: [packages/core/src/loaders.ts:140](https://github.com/bitswired/foldcms/blob/485aa8df4385a9a7d7379ad36deb6d860f28ee8b/packages/core/src/loaders.ts#L140)
+Defined in: [packages/core/src/loaders.ts:140](https://github.com/bitswired/foldcms/blob/632c86107fa9a8831c2683e40b523156e2a6b68e/packages/core/src/loaders.ts#L140)
 
 Loads and parses YAML files from a directory, validating each file against a schema.
 Supports both .yaml and .yml file extensions. Each file is parsed as a single YAML document.
